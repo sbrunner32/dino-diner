@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Menu</name>
+    </assembly>
+    <members>
+        <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
+            <summary>
+            Public class for the Brontowurst sandwich
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Price">
+            <summary>
+            Property used to get and set the value of the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Calories">
+            <summary>
+            Property used to get and set the value of the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Ingredients">
+            <summary>
+            Property used to get and set the list of ingredients on this Brontowurst sandwich.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.#ctor">
+            <summary>
+            Default constructor for Brontowurst that sets default price and calories
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldPeppers">
+            <summary>
+            Method to set this Brontowurst's pepper property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldOnion">
+            <summary>
+            Method to set this Brontowurst's onion property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldBun">
+            <summary>
+            Method to set this Brontowurst's bun property to false.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.DinoNuggets">
+            <summary>
+            Public class for the DinoNuggets entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Price">
+            <summary>
+            Property used to get and set the value of the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Calories">
+            <summary>
+            Property used to get and set the value of the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Ingredients">
+            <summary>
+            Property used to get and set the list of ingredients on this order of DinoNuggets.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.#ctor">
+            <summary>
+            Default constructor for DinoNuggets which sets the default price, calories, and nuggetCount. 
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.AddNugget">
+            <summary>
+            Method to add one to the nuggetCount, as well as update the price, calories, and ingredients accordingly.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
+            <summary>
+            Public class for the Prehistoric PBJ sandwich.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Price">
+            <summary>
+            Property used to get and set the value of the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Calories">
+            <summary>
+            Property used to get and set the value of the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">
+            <summary>
+            Property used to get and set the list of ingredients on this Prehistoric PBJ sandwich.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.#ctor">
+            <summary>
+            Default constructor for PrehistoricPBJ that sets default price and calories
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.HoldPeanutButter">
+            <summary>
+            Method to set this PrehistoricPBJ's peanutButter property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.HoldJelly">
+            <summary>
+            Method to set this PrehistoricPBJ's jelly property to false.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.PterodactylWings">
+            <summary>
+            Public class for the PterodactylWings
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Price">
+            <summary>
+            Property used to get and set the value of the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Calories">
+            <summary>
+            Property used to get and set the value of the calories.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.PterodactylWings.#ctor">
+            <summary>
+            Default constructor for PterodactylWings that sets default price and calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Ingredients">
+            <summary>
+            Property used to get and set the list of ingredients of the PterodactylWings
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.SteakosaurusBurger">
+            <summary>
+            Public class for the SteakosaurasBurger entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Price">
+            <summary>
+            Property used to get and set the value of the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Calories">
+            <summary>
+            Property used to get and set the value of the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Ingredients">
+            <summary>
+            Property used to get and set the list of ingredients on this SteakosaurasBurger.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.#ctor">
+            <summary>
+            Default constructor for SteakosaurasBurger that sets the default price and calories
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldBun">
+            <summary>
+            Method to set this SteakosaurasBurger's bun property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldPickle">
+            <summary>
+            Method to set this SteakosaurasBurger's pickle property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldKetchup">
+            <summary>
+            Method to set this SteakosaurasBurger's ketchup property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldMustard">
+            <summary>
+            Method to set this SteakosaurasBurger's mustard property to false.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
+            <summary>
+            Public class for the TRexKingBurger entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Price">
+            <summary>
+            Property used to get and set the value of the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Calories">
+            <summary>
+            Property used to get and set the value of the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Ingredients">
+            <summary>
+            Property used to get and set the list of ingredients on this TRexKingBurger.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.#ctor">
+            <summary>
+            Default constructor for TRexKingBurger that sets the default price and calories
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldBun">
+            <summary>
+            Method to set this SteakosaurasBurger's bun property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldLettuce">
+            <summary>
+            Method to set this SteakosaurasBurger's lettuce property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldTomato">
+            <summary>
+            Method to set this SteakosaurasBurger's tomato property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldOnion">
+            <summary>
+            Method to set this SteakosaurasBurger's onion property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldPickle">
+            <summary>
+            Method to set this SteakosaurasBurger's pickle property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldKetchup">
+            <summary>
+            Method to set this SteakosaurasBurger's ketchup property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMustard">
+            <summary>
+            Method to set this SteakosaurasBurger's mustard property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMayo">
+            <summary>
+            Method to set this SteakosaurasBurger's mayo property to false.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.VelociWrap">
+            <summary>
+            Class to represent the Velociwrap
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Price">
+            <summary>
+            Property used to get and set the value of the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Calories">
+            <summary>
+            Property used to get and set the value of the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">
+            <summary>
+            Property used to get and set the list of ingredients on this Velociwrap.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.#ctor">
+            <summary>
+            Default constructor for this Velociwrap that sets default price and calories.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldDressing">
+            <summary>
+            Method to set this Velociwrap's dressing property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldLettuce">
+            <summary>
+            Method to set this Velociwrap's lettuce property to false.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldCheese">
+            <summary>
+            Method to set this Velociwrap's cheese property to false.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Price">
+            <summary>
+            Gets and sets the price
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Calories">
+            <summary>
+            Gets and sets the calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Ingredients">
+            <summary>
+            Gets the ingredients list
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Size">
+            <summary>
+            Gets or sets the size
+            </summary>
+        </member>
+    </members>
+</doc>
