@@ -1,5 +1,5 @@
 ﻿
-/*using System.Collections.Generic;
+using System.Collections.Generic;
 using Xunit;
 using DinoDiner.Menu.Entrees;
 
@@ -20,7 +20,6 @@ namespace MenuTest.Entrees
             PterodactylWings pw = new PterodactylWings();
             Assert.Equal<uint>(318, pw.Calories);
         }
-
         [Fact]
         public void ShouldListDefaultIngredients()
         {
@@ -30,7 +29,5 @@ namespace MenuTest.Entrees
             Assert.Contains<string>("Wing Sauce", ingredients);
             Assert.Equal<int>(2, ingredients.Count);
         }
-
     }
 }
-*/
