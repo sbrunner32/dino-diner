@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the TRexKingBurger entree.
     /// </summary>
-    public class TRexKingBurger
+    public class TRexKingBurger : Entree
     {
         private bool bun = true;
         private bool lettuce = true;
@@ -18,20 +18,11 @@ namespace DinoDiner.Menu.Entrees
         private bool mustard = true;
         private bool mayo = true;
 
-        /// <summary>
-        /// Property used to get and set the value of the price.
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Property used to get and set the value of the calories.
-        /// </summary>
-        public uint Calories { get; set; }
-
+        
         /// <summary>
         /// Property used to get and set the list of ingredients on this TRexKingBurger.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

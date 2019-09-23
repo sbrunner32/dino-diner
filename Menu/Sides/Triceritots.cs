@@ -16,7 +16,7 @@ namespace DinoDiner.Menu.Sides
         {
             get
             {
-                return new List<string>() { "potatoes", "salt", "vegetable oil" };
+                return new List<string>() { "Potato", "Salt", "Vegetable Oil" };
             }
         }
 

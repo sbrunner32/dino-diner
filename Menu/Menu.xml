@@ -9,16 +9,6 @@
             Public class for the Brontowurst sandwich
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Price">
-            <summary>
-            Property used to get and set the value of the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Calories">
-            <summary>
-            Property used to get and set the value of the calories.
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Ingredients">
             <summary>
             Property used to get and set the list of ingredients on this Brontowurst sandwich.
@@ -49,16 +39,6 @@
             Public class for the DinoNuggets entree.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Price">
-            <summary>
-            Property used to get and set the value of the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Calories">
-            <summary>
-            Property used to get and set the value of the calories.
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Ingredients">
             <summary>
             Property used to get and set the list of ingredients on this order of DinoNuggets.
@@ -74,19 +54,24 @@
             Method to add one to the nuggetCount, as well as update the price, calories, and ingredients accordingly.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Price">
+            <summary>
+            Gets and sets the price
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Calories">
+            <summary>
+            Gets and sets the calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Ingredients">
+            <summary>
+            Gets the ingredients list
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
             <summary>
             Public class for the Prehistoric PBJ sandwich.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Price">
-            <summary>
-            Property used to get and set the value of the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Calories">
-            <summary>
-            Property used to get and set the value of the calories.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">
@@ -139,16 +124,6 @@
             Public class for the SteakosaurasBurger entree.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Price">
-            <summary>
-            Property used to get and set the value of the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Calories">
-            <summary>
-            Property used to get and set the value of the calories.
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Ingredients">
             <summary>
             Property used to get and set the list of ingredients on this SteakosaurasBurger.
@@ -182,16 +157,6 @@
         <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
             <summary>
             Public class for the TRexKingBurger entree.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Price">
-            <summary>
-            Property used to get and set the value of the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Calories">
-            <summary>
-            Property used to get and set the value of the calories.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Ingredients">
@@ -249,16 +214,6 @@
             Class to represent the Velociwrap
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Price">
-            <summary>
-            Property used to get and set the value of the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Calories">
-            <summary>
-            Property used to get and set the value of the calories.
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">
             <summary>
             Property used to get and set the list of ingredients on this Velociwrap.
@@ -284,6 +239,61 @@
             Method to set this Velociwrap's cheese property to false.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Sides.MeteorMacAndCheese">
+            <summary>
+            Public class for the side Meteor Mac and Cheese
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Ingredients">
+            <summary>
+            Overrides the side class implementation of ingredients to display the side's ingredients
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.MeteorMacAndCheese.size">
+            <summary>
+            Protected member that holds the size of the Meteor Mac and Cheese.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Size">
+            <summary>
+            Public Override to set/get size and change calories and price accordingly.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.MeteorMacAndCheese.#ctor">
+            <summary>
+            Public constructor for default order of Meteor Mac and cheese.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.MezzorellaSticks">
+            <summary>
+            Public class that represents Mezzorella sticks
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Ingredients">
+            <summary>
+            Overrides the side class implementation of ingredients to display the side's ingredients
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.MezzorellaSticks.size">
+            <summary>
+            Protected member that holds the size of the side dish.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Size">
+            <summary>
+            Public Override to set/get size and change calories and price accordingly.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.MezzorellaSticks.#ctor">
+            <summary>
+            Public constructor for default order of Mezzorella sticks.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Size">
+            <summary>
+            Enumerator representing the size of the side.
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Sides.Side.Price">
             <summary>
             Gets and sets the price
@@ -302,6 +312,31 @@
         <member name="P:DinoDiner.Menu.Sides.Side.Size">
             <summary>
             Gets or sets the size
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Triceritots">
+            <summary>
+            Public class to represent the side dish Triceritops.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Triceritots.Ingredients">
+            <summary>
+            Overrides the side class implementation of ingredients to display the side's ingredients
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.Triceritots.size">
+            <summary>
+            Protected member that holds the size of the side dish.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Triceritots.Size">
+            <summary>
+            Public Override to set/get size and change calories and price accordingly.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Triceritots.#ctor">
+            <summary>
+            Public constructor for default order of Triceritops.
             </summary>
         </member>
     </members>

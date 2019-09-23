@@ -5,25 +5,16 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the Prehistoric PBJ sandwich.
     /// </summary>
-    public class PrehistoricPBJ
+    public class PrehistoricPBJ : Entree
     {
         private bool peanutButter = true;
         private bool jelly = true;
 
-        /// <summary>
-        /// Property used to get and set the value of the price.
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Property used to get and set the value of the calories.
-        /// </summary>
-        public uint Calories { get; set; }
-
+       
         /// <summary>
         /// Property used to get and set the list of ingredients on this Prehistoric PBJ sandwich.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

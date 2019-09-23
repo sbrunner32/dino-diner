@@ -6,24 +6,14 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the DinoNuggets entree.
     /// </summary>
-    public class DinoNuggets
+    public class DinoNuggets : Entree
     {
-        private int nuggetCount { get; set; }
-
-        /// <summary>
-        /// Property used to get and set the value of the price.
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Property used to get and set the value of the calories.
-        /// </summary>
-        public uint Calories { get; set; }
+        private int nuggetCount { get; set; }    
 
         /// <summary>
         /// Property used to get and set the list of ingredients on this order of DinoNuggets.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
