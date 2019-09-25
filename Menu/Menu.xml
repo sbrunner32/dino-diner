@@ -4,6 +4,151 @@
         <name>Menu</name>
     </assembly>
     <members>
+        <member name="T:DinoDiner.Menu.Drinks.Drink">
+            <summary>
+            Abstract class to denote a drink item from the menu.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Price">
+            <summary>
+            Gets and sets the price
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Calories">
+            <summary>
+            Gets and sets the calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Ingredients">
+            <summary>
+            Gets the ingredients list
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Ice">
+            <summary>
+            Whether or not the drink contains Ice, default value = true
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Size">
+            <summary>
+            Gets or sets the size
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.JurrasicJava">
+            <summary>
+            Class for JurrasicJava that inherits from the Drink class
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Decaf">
+            <summary>
+            Public property to determine if the coffee is decaf or not, default value of false
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.RoomForCream">
+            <summary>
+            Public property that determines if there is room for cream in this coffee, default value of false.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Ingredients">
+            <summary>
+            Public override property to set/get the list of ingredients
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.JurrasicJava.size">
+            <summary>
+            Protected size quanity of this Sodasauras
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Size">
+            <summary>
+            Override to get and set the size of the Sodasauras and the according calorie and price values
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.#ctor">
+            <summary>
+            Public constructor for the Sodasauras class that sets default values and inherits from the drink constructor
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.AddIce">
+            <summary>
+            Public method to set the Ice property to true (requesting Ice with the coffee)
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.LeaveRoomForCream">
+            <summary>
+            Method to leave room for cream by setting the RoomForCream property to true.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Sodasauras">
+            <summary>
+            Class for Sodasauras that inherits from the Drink class
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Sodasauras.flavor">
+            <summary>
+            Private backing property for the flavor of this Sodasauras
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasauras.Flavor">
+            <summary>
+            Property to store the flavor of this Sodasauras
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasauras.Ingredients">
+            <summary>
+            Public override property to set/get the list of ingredients
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Sodasauras.size">
+            <summary>
+            Protected size quanity of this Sodasauras
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasauras.Size">
+            <summary>
+            Override to get and set the size of the Sodasauras and the according calorie and price values
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Sodasauras.#ctor">
+            <summary>
+            Public constructor for the Sodasauras class that sets default values and inherits from the drink constructor
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Sodasauras.HoldIce">
+            <summary>
+            Public method to set the Ice property to false (requesting no Ice on a drink)
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.SodasaurasFlavor">
+            <summary>
+            Enum to represent the possible Sodasauras Flavors
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Ingredients">
+            <summary>
+            Public override property to set/get the list of ingredients
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Tyrannotea.size">
+            <summary>
+            Protected size quanity of this Sodasauras
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Size">
+            <summary>
+            Override to get and set the size of the Sodasauras and the according calorie and price values
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.#ctor">
+            <summary>
+            Public constructor for the Sodasauras class that sets default values and inherits from the drink constructor
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.HoldIce">
+            <summary>
+            Public method to set the Ice property to false (requesting no Ice on a drink)
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
             <summary>
             Public class for the Brontowurst sandwich
@@ -52,6 +197,14 @@
         <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.AddNugget">
             <summary>
             Method to add one to the nuggetCount, as well as update the price, calories, and ingredients accordingly.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.Entree">
+            <summary>
+            Class representing a side item from the menu
+            </summary>
+            <summary>
+            Class representing an entree item from the menu with calories and price
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.Entree.Price">
@@ -289,9 +442,9 @@
             Public constructor for default order of Mezzorella sticks.
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.Size">
+        <member name="T:DinoDiner.Menu.Sides.Side">
             <summary>
-            Enumerator representing the size of the side.
+            Class representing a side item from the menu
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Sides.Side.Price">
@@ -337,6 +490,11 @@
         <member name="M:DinoDiner.Menu.Sides.Triceritots.#ctor">
             <summary>
             Public constructor for default order of Triceritops.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Size">
+            <summary>
+            Enumerator representing the size of the item.
             </summary>
         </member>
     </members>

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
-{
+namespace DinoDiner.Menu.Drinks
+{    
     /// <summary>
-    /// Class representing a side item from the menu
+    /// Abstract class to denote a drink item from the menu.
     /// </summary>
-    public abstract class Side
+    public abstract class Drink
     {
         /// <summary>
         /// Gets and sets the price
@@ -23,11 +23,15 @@ namespace DinoDiner.Menu.Sides
         /// Gets the ingredients list
         /// </summary>
         public abstract List<string> Ingredients { get; }
+        
+        /// <summary>
+        /// Whether or not the drink contains Ice, default value = true
+        /// </summary>
+        public bool Ice { get; set; } = true;
 
         /// <summary>
         /// Gets or sets the size
         /// </summary>
         public abstract Size Size { get; set; }
-
     }
 }
