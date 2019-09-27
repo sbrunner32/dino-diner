@@ -4,8 +4,14 @@ using System.Text;
 
 namespace DinoDiner.Menu.Drinks
 {
+    /// <summary>
+    /// Class for Tyrannotea that inherits from the Drink class
+    /// </summary>
     public class Tyrannotea : Drink
     {
+        /// <summary>
+        /// Public getter and setter that stores whether or not the Tyrannotea is sweet, defaults to false
+        /// </summary>
         public bool Sweet { get; set; } = false;
 
         /// <summary>
@@ -20,13 +26,19 @@ namespace DinoDiner.Menu.Drinks
         {
             get
             {
-                return new List<string>() { "Water", "Tea" };
+                List<string> temp = new List<string>() { "Water", "Tea" };
+                if (Lemon)
+                    temp.Add("Lemon");
+                if (Sweet)
+                    temp.Add("Cane Sugar");
+                return temp;
             }
         }
         /// <summary>
         /// Protected size quanity of this Sodasauras
         /// </summary>
         protected Size size;
+
         /// <summary>
         /// Override to get and set the size of the Sodasauras and the according calorie and price values
         /// </summary>
@@ -72,12 +84,13 @@ namespace DinoDiner.Menu.Drinks
 
         }
 
+       
         /// <summary>
-        /// Public method to set the Ice property to false (requesting no Ice on a drink)
+        /// Public method to add Lemon to the Tyrannotea
         /// </summary>
-        public void HoldIce()
+        public void AddLemon()
         {
-            this.Ice = false;
+            this.Lemon = true;
         }
     }
 }

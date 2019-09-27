@@ -4,6 +4,11 @@
         <name>Menu</name>
     </assembly>
     <members>
+        <member name="T:DinoDiner.Menu.CretaceousCombo">
+            <summary>
+            Public class for a CretaceousCombo
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Drinks.Drink">
             <summary>
             Abstract class to denote a drink item from the menu.
@@ -32,6 +37,11 @@
         <member name="P:DinoDiner.Menu.Drinks.Drink.Size">
             <summary>
             Gets or sets the size
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Drink.HoldIce">
+            <summary>
+            Public method to set the Ice property to false (requesting no Ice on a drink)
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Drinks.JurrasicJava">
@@ -114,14 +124,24 @@
             Public constructor for the Sodasauras class that sets default values and inherits from the drink constructor
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Sodasauras.HoldIce">
-            <summary>
-            Public method to set the Ice property to false (requesting no Ice on a drink)
-            </summary>
-        </member>
         <member name="T:DinoDiner.Menu.Drinks.SodasaurasFlavor">
             <summary>
             Enum to represent the possible Sodasauras Flavors
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Tyrannotea">
+            <summary>
+            Class for Tyrannotea that inherits from the Drink class
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Sweet">
+            <summary>
+            Public getter and setter that stores whether or not the Tyrannotea is sweet, defaults to false
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Lemon">
+            <summary>
+            Public getter and setter that stores whether or not the Tyrannotea has lemon, defaults to false
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Ingredients">
@@ -147,6 +167,11 @@
         <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.HoldIce">
             <summary>
             Public method to set the Ice property to false (requesting no Ice on a drink)
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.AddLemon">
+            <summary>
+            Public method to add Lemon to the Tyrannotea
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Entrees.Brontowurst">

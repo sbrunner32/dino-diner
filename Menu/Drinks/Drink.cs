@@ -33,5 +33,13 @@ namespace DinoDiner.Menu.Drinks
         /// Gets or sets the size
         /// </summary>
         public abstract Size Size { get; set; }
+
+        /// <summary>
+        /// Public method to set the Ice property to false (requesting no Ice on a drink)
+        /// </summary>
+        public void HoldIce()
+        {
+            this.Ice = false;
+        }
     }
 }
