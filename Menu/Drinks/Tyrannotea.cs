@@ -10,9 +10,28 @@ namespace DinoDiner.Menu.Drinks
     public class Tyrannotea : Drink
     {
         /// <summary>
+        /// Protected property for whether or not the Tea is sweet. 
+        /// </summary>
+        protected bool sweet = false;
+
+        /// <summary>
         /// Public getter and setter that stores whether or not the Tyrannotea is sweet, defaults to false
         /// </summary>
-        public bool Sweet { get; set; } = false;
+        public bool Sweet
+        {
+            get
+            {
+                return sweet;
+            }
+            set
+            {
+                sweet = value;
+                if (sweet)
+                    this.Calories *= 2;
+                else
+                    this.Calories /= 2;
+            }
+        } 
 
         /// <summary>
         /// Public getter and setter that stores whether or not the Tyrannotea has lemon, defaults to false
@@ -79,8 +98,8 @@ namespace DinoDiner.Menu.Drinks
         /// </summary>
         public Tyrannotea() : base()
         {
-            this.Price = 1.50;
-            this.Calories = 112;
+            this.Price = 0.99;
+            this.Calories = 8;
 
         }
 

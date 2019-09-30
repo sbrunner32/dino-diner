@@ -16,6 +16,13 @@ namespace MenuTest.Drinks
             Tyrannotea tea = new Tyrannotea();
             Assert.Equal<double>(0.99, tea.Price);
         }
+        /// The default value for calories should be 8
+        [Fact]
+        public void ShouldHaveCorrectDefaultCalories()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            Assert.Equal<uint>(8, tea.Calories);
+        }
 
         /// The default Ice value should be True.    
         [Fact]
@@ -109,6 +116,94 @@ namespace MenuTest.Drinks
             tea.AddLemon();
             Assert.True(tea.Lemon);
         }
+
+        ///The tyrannotea should have correct default ingredients set
+        [Fact]
+        public void ShouldHaveCorrectDefaultIngredients()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            Assert.Contains<string>("Water", tea.Ingredients);
+            Assert.Contains<string>("Tea", tea.Ingredients);
+            Assert.Equal<int>(2, tea.Ingredients.Count);
+        }
+
+        ///The tyrannotea should have correct ingredients set for all values
+        [Fact]
+        public void ShouldHaveCorrectIngredients()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.Sweet = true;
+            tea.AddLemon();
+            Assert.Contains<string>("Water", tea.Ingredients);
+            Assert.Contains<string>("Tea", tea.Ingredients);
+            Assert.Contains<string>("Cane Sugar", tea.Ingredients);
+            Assert.Contains<string>("Lemon", tea.Ingredients);
+            Assert.Equal<int>(4, tea.Ingredients.Count);
+        }
+
+        ///The Tea should have the correct amount of calories when the sweet property is set to true
+        [Fact]
+        public void ShouldHaveCorrectSweetSmallCalories()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.Sweet = true;
+            Assert.Equal<uint>(16, tea.Calories);
+        }
+
+        ///The Tea should have the correct amount of calories when the sweet property is set to true
+        [Fact]
+        public void ShouldHaveCorrectSweetMediumCalories()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.Size = Size.Medium;
+            tea.Sweet = true;
+            Assert.Equal<uint>(32, tea.Calories);
+        }
+
+        ///The Tea should have the correct amount of calories when the sweet property is set to true
+        [Fact]
+        public void ShouldHaveCorrectSweetLargeCalories()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            
+            tea.Sweet = true;
+            tea.Size = Size.Large;
+            Assert.Equal<uint>(64, tea.Calories);
+        }
+
+        ///The Tea should have the correct amount of calories when the sweet property is set to false after being set to true.
+        [Fact]
+        public void ShouldHaveCaloriesSwapBackAfterSweetForSmall()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.Sweet = true;
+            tea.Sweet = false;
+            Assert.Equal<uint>(8, tea.Calories);
+        }
+
+        ///The Tea should have the correct amount of calories when the sweet property is set to false after being set to true.
+        [Fact]
+        public void ShouldHaveCaloriesSwapBackAfterSweetForMedium()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.Size = Size.Medium;
+            tea.Sweet = true;
+            tea.Sweet = false;
+            Assert.Equal<uint>(16, tea.Calories);
+        }
+
+        ///The Tea should have the correct amount of calories when the sweet property is set to false after being set to true.
+        [Fact]
+        public void ShouldHaveCaloriesSwapBackAfterSweetForLarge()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.Size = Size.Large;
+            tea.Sweet = true;
+            tea.Sweet = false;
+
+            Assert.Equal<uint>(32, tea.Calories);
+        }
+
 
     }
 }

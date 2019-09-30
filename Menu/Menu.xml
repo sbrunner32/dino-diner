@@ -134,6 +134,11 @@
             Class for Tyrannotea that inherits from the Drink class
             </summary>
         </member>
+        <member name="F:DinoDiner.Menu.Drinks.Tyrannotea.sweet">
+            <summary>
+            Protected property for whether or not the Tea is sweet. 
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Sweet">
             <summary>
             Public getter and setter that stores whether or not the Tyrannotea is sweet, defaults to false
@@ -164,14 +169,39 @@
             Public constructor for the Sodasauras class that sets default values and inherits from the drink constructor
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.HoldIce">
-            <summary>
-            Public method to set the Ice property to false (requesting no Ice on a drink)
-            </summary>
-        </member>
         <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.AddLemon">
             <summary>
             Public method to add Lemon to the Tyrannotea
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Water">
+            <summary>
+            Class to represent Water which inherits from the Drink class
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Lemon">
+            <summary>
+            Public getter and setter that stores whether or not the Tyrannotea has lemon, defaults to false
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Ingredients">
+            <summary>
+            Public override property to set/get the list of ingredients
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Size">
+            <summary>
+            Override to get and set the Size of the water. Defaults to the value of Small
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Water.#ctor">
+            <summary>
+            Base constructor for Water which sets default Price and Calories
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Water.AddLemon">
+            <summary>
+            Public method to add Lemon to the Water
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
