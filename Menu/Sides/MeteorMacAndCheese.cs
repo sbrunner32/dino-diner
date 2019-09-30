@@ -53,6 +53,7 @@ namespace DinoDiner.Menu.Sides
                 return size;
             }
         }
+
         /// <summary>
         /// Public constructor for default order of Meteor Mac and cheese.
         /// </summary>

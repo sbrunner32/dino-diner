@@ -67,13 +67,31 @@ namespace MenuTest.Drinks
             Assert.Equal<SodasaurasFlavor>(SodasaurasFlavor.Lime, soda.Flavor);
         }
 
-        ///The correct default price, calories, ice, and size
+        ///The correct default price value should be set
         [Fact]
         public void ShouldHaveCorrectDefaultPrice()
         {
             Sodasauras soda = new Sodasauras();
             Assert.Equal<double>(1.50, soda.Price);
         }
+
+        ///The correct price and calories after changing to small, medium, and large sizes.
+        [Fact]
+        public void ShouldHaveCorrectDefaultCalories()
+        {
+            Sodasauras soda = new Sodasauras();            
+            Assert.Equal<uint>(112, soda.Calories);
+        }
+
+        ///The soda should have the correct default size of small
+        [Fact]
+        public void ShouldHaveCorrectDefaultSize()
+        {
+            Sodasauras soda = new Sodasauras();
+            Assert.Equal<Size>(Size.Small, soda.Size);
+        }
+
+
         ///The correct price and calories after changing to small, medium, and large sizes.
         [Fact]
         public void ShouldHaveCorrectPriceForSmall()

@@ -48,6 +48,14 @@ namespace MenuTest.Drinks
             Assert.False(tea.Lemon);
         }
 
+        ///The tyrannotea should have the correct default size of small
+        [Fact]
+        public void ShouldHaveCorrectDefaultSize()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            Assert.Equal<Size>(Size.Small, tea.Size);
+        }
+
         ///The correct price and calories after changing to small, medium, and large sizes.
         [Fact]
         public void ShouldHaveCorrectPriceForSmall()

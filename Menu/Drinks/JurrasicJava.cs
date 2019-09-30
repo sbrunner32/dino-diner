@@ -70,7 +70,7 @@ namespace DinoDiner.Menu.Drinks
             this.Price = 0.59;
             this.Calories = 2;
             this.Ice = false;
-
+            this.size = Size.Small;
         }
 
         /// <summary>

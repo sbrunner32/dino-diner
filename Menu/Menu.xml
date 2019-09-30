@@ -447,6 +447,31 @@
             Method to set this Velociwrap's cheese property to false.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Sides.Fryceritops">
+            <summary>
+            Public class for the side item Fryceritops which inherits from the Side base class
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Ingredients">
+            <summary>
+            Overrides the side class implementation of ingredients to display the side's ingredients
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.Fryceritops.size">
+            <summary>
+            Protected member that holds the size of the Meteor Mac and Cheese.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Size">
+            <summary>
+            Public Override to set/get size and change calories and price accordingly.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Fryceritops.#ctor">
+            <summary>
+            Public constructor for default order of Fryceritops.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Sides.MeteorMacAndCheese">
             <summary>
             Public class for the side Meteor Mac and Cheese

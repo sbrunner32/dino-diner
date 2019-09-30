@@ -4,8 +4,14 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// Public class for the side item Fryceritops which inherits from the Side base class
+    /// </summary>
     public class Fryceritops : Side
     {
+        /// <summary>
+        /// Overrides the side class implementation of ingredients to display the side's ingredients
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -13,7 +19,14 @@ namespace DinoDiner.Menu.Sides
                 return new List<string>() { "Potato", "Salt", "Vegetable Oil" };
             }
         }
+        /// <summary>
+        /// Protected member that holds the size of the Meteor Mac and Cheese.
+        /// </summary>
         protected Size size;
+
+        /// <summary>
+        /// Public Override to set/get size and change calories and price accordingly.
+        /// </summary>
         public override Size Size
         {
             set{
@@ -39,10 +52,15 @@ namespace DinoDiner.Menu.Sides
                 return size;
             }
         }
+
+        /// <summary>
+        /// Public constructor for default order of Fryceritops.
+        /// </summary>
         public Fryceritops(): base()
         {
             this.Price = 0.99;
-            this.Calories = 222;            
+            this.Calories = 222;
+            this.size = Size.Small;
             
         }
     }

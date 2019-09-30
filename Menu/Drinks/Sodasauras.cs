@@ -79,6 +79,7 @@ namespace DinoDiner.Menu.Drinks
         {
             this.Price = 1.50;
             this.Calories = 112;
+            this.size = Size.Small;
 
         }
 
