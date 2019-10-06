@@ -111,34 +111,14 @@ namespace DinoDiner.Menu
         /// </summary>
         /// <returns>Full list of all menu items separated by new line characters. </returns>
         public override string ToString()
-        {
-            string realFinal = "";
+        {            
             List<string> final = new List<string>();
-            foreach (IMenuItem i in AvailableEntrees)
+            foreach(IMenuItem i in AvailableMenuItems)
             {
-                string temp = i.ToString()+ " ";
-                final.Add(temp);
+                final.Add(i.ToString());
+                final.Add("\n");
             }
-            final.Add("\n");
-            foreach (IMenuItem i in AvailableSides)
-            {
-                string temp = i.ToString() + " ";
-                final.Add(temp);
-            }
-            final.Add("\n");
-            foreach (IMenuItem i in AvailableDrinks)
-            {
-                string temp = i.ToString() + " ";
-                final.Add(temp);
-            }
-            final.Add("\n");
-            foreach (IMenuItem i in AvailableCombos)
-            {
-                string temp = i.ToString() + " ";
-                final.Add(temp);
-            }
-            realFinal = string.Concat(realFinal, final);
-            return realFinal;
+            return final.ToString();
         }
     }
 }
