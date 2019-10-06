@@ -605,6 +605,42 @@
             Getter / setter for the Ingredients of the menu item. 
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Menu">
+            <summary>
+            Public class to represent the menu of the restaurant.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableEntrees">
+            <summary>
+            Public getter to return all the currently available Entree items on the menu.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableSides">
+            <summary>
+            Public getter to return all the currently available Side items on the menu.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableDrinks">
+            <summary>
+            Public getter to return all the currently available Drink items on the menu.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableCombos">
+            <summary>
+            Public getter to return all the currently available Combo items on the menu.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableMenuItems">
+            <summary>
+            Public getter to return all the currently available menu items.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.ToString">
+            <summary>
+            Public Override of ToString method to display the full menu contents
+            </summary>
+            <returns>Full list of all menu items separated by new line characters. </returns>
+        </member>
         <member name="T:DinoDiner.Menu.Sides.Fryceritops">
             <summary>
             Public class for the side item Fryceritops which inherits from the Side base class
