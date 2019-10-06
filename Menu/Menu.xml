@@ -9,6 +9,53 @@
             Public class for a CretaceousCombo
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Entree">
+            <summary>
+            The entree item of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Drink">
+            <summary>
+            The drink item of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Side">
+            <summary>
+            The side item of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Size">
+            <summary>
+            The getter which sets the size of the items in the combo to ths size of the combo.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Price">
+            <summary>
+            The price of the combo getter, returns the price of all items -0.25
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Calories">
+            <summary>
+            The getter of the combo's calories, returns the calories of entree + drink + side.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Ingredients">
+            <summary>
+            The getter of the ingredients of the combo. 
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.ToString">
+            <summary>
+            The public override to return the contents of the combo as a string. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entrees.Entree)">
+            <summary>
+            Public constructor for CretaceousCombo which sets the entree while using default side and drink values.
+            </summary>
+            <param name="entree">The entree item to set for this CretaceousCombo</param>
+        </member>
         <member name="T:DinoDiner.Menu.Drinks.Drink">
             <summary>
             Abstract class to denote a drink item from the menu.
@@ -44,90 +91,137 @@
             Public method to set the Ice property to false (requesting no Ice on a drink)
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.JurrasicJava">
+        <member name="T:DinoDiner.Menu.Drinks.JurassicJava">
             <summary>
             Class for JurrasicJava that inherits from the Drink class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Decaf">
+        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.Decaf">
             <summary>
             Public property to determine if the coffee is decaf or not, default value of false
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.RoomForCream">
+        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.RoomForCream">
             <summary>
             Public property that determines if there is room for cream in this coffee, default value of false.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Ingredients">
+        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.Ingredients">
             <summary>
             Public override property to set/get the list of ingredients
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.JurrasicJava.size">
+        <member name="F:DinoDiner.Menu.Drinks.JurassicJava.size">
             <summary>
             Protected size quanity of this Sodasauras
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Size">
+        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.Size">
             <summary>
             Override to get and set the size of the Sodasauras and the according calorie and price values
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.#ctor">
+        <member name="M:DinoDiner.Menu.Drinks.JurassicJava.#ctor">
             <summary>
             Public constructor for the Sodasauras class that sets default values and inherits from the drink constructor
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.AddIce">
+        <member name="M:DinoDiner.Menu.Drinks.JurassicJava.AddIce">
             <summary>
             Public method to set the Ice property to true (requesting Ice with the coffee)
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.LeaveRoomForCream">
+        <member name="M:DinoDiner.Menu.Drinks.JurassicJava.LeaveRoomForCream">
             <summary>
             Method to leave room for cream by setting the RoomForCream property to true.
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.Sodasauras">
+        <member name="M:DinoDiner.Menu.Drinks.JurassicJava.ToString">
+            <summary>
+            Override of the ToString method 
+            </summary>
+            <returns>The name of this drink</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.SodasaurusFlavor">
+            <summary>
+            Enum to represent the possible Sodasaurus Flavors
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Cola">
+            <summary>
+            A cola flavored soda
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Orange">
+            <summary>
+            An orange flavored soda
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Vanilla">
+            <summary>
+            A vanilla flavored soda
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Chocolate">
+            <summary>
+            A chocolate flavored soda
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.RootBeer">
+            <summary>
+            A root beer flavored soda
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Cherry">
+            <summary>
+            A cherry flavored soda
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Lime">
+            <summary>
+            A lime flavored soda
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Sodasaurus">
             <summary>
             Class for Sodasauras that inherits from the Drink class
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Sodasauras.flavor">
+        <member name="F:DinoDiner.Menu.Drinks.Sodasaurus.flavor">
             <summary>
             Private backing property for the flavor of this Sodasauras
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Sodasauras.Flavor">
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Flavor">
             <summary>
             Property to store the flavor of this Sodasauras
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Sodasauras.Ingredients">
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Ingredients">
             <summary>
             Public override property to set/get the list of ingredients
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Sodasauras.size">
+        <member name="F:DinoDiner.Menu.Drinks.Sodasaurus.size">
             <summary>
             Protected size quanity of this Sodasauras
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Sodasauras.Size">
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Size">
             <summary>
             Override to get and set the size of the Sodasauras and the according calorie and price values
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Sodasauras.#ctor">
+        <member name="M:DinoDiner.Menu.Drinks.Sodasaurus.#ctor">
             <summary>
             Public constructor for the Sodasauras class that sets default values and inherits from the drink constructor
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.SodasaurasFlavor">
+        <member name="M:DinoDiner.Menu.Drinks.Sodasaurus.ToString">
             <summary>
-            Enum to represent the possible Sodasauras Flavors
+            Override of the ToString method 
             </summary>
+            <returns>The size, flavor, and name of this side item</returns>
         </member>
         <member name="T:DinoDiner.Menu.Drinks.Tyrannotea">
             <summary>
@@ -174,6 +268,12 @@
             Public method to add Lemon to the Tyrannotea
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.ToString">
+            <summary>
+            Override of the ToString method 
+            </summary>
+            <returns>The size and name of this side item</returns>
+        </member>
         <member name="T:DinoDiner.Menu.Drinks.Water">
             <summary>
             Class to represent Water which inherits from the Drink class
@@ -203,6 +303,12 @@
             <summary>
             Public method to add Lemon to the Water
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Water.ToString">
+            <summary>
+            Override of the ToString method 
+            </summary>
+            <returns>The size and name of this side item</returns>
         </member>
         <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
             <summary>
@@ -234,6 +340,12 @@
             Method to set this Brontowurst's bun property to false.
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.ToString">
+            <summary>
+            Displays the name of the item
+            </summary>
+            <returns>The string value of the item name</returns>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.DinoNuggets">
             <summary>
             Public class for the DinoNuggets entree.
@@ -253,6 +365,12 @@
             <summary>
             Method to add one to the nuggetCount, as well as update the price, calories, and ingredients accordingly.
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.ToString">
+            <summary>
+            Displays the name of the item
+            </summary>
+            <returns>The string value of the item name</returns>
         </member>
         <member name="T:DinoDiner.Menu.Entrees.Entree">
             <summary>
@@ -302,19 +420,15 @@
             Method to set this PrehistoricPBJ's jelly property to false.
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.ToString">
+            <summary>
+            Displays the name of the item
+            </summary>
+            <returns>The string value of the item name</returns>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.PterodactylWings">
             <summary>
             Public class for the PterodactylWings
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Price">
-            <summary>
-            Property used to get and set the value of the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Calories">
-            <summary>
-            Property used to get and set the value of the calories.
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Entrees.PterodactylWings.#ctor">
@@ -326,6 +440,12 @@
             <summary>
             Property used to get and set the list of ingredients of the PterodactylWings
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.PterodactylWings.ToString">
+            <summary>
+            Displays the name of the item
+            </summary>
+            <returns>The string value of the item name</returns>
         </member>
         <member name="T:DinoDiner.Menu.Entrees.SteakosaurusBurger">
             <summary>
@@ -361,6 +481,12 @@
             <summary>
             Method to set this SteakosaurasBurger's mustard property to false.
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.ToString">
+            <summary>
+            Displays the name of the item
+            </summary>
+            <returns>The string value of the item name</returns>
         </member>
         <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
             <summary>
@@ -417,6 +543,12 @@
             Method to set this SteakosaurasBurger's mayo property to false.
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.ToString">
+            <summary>
+            Displays the name of the item
+            </summary>
+            <returns>The string value of the item name</returns>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.VelociWrap">
             <summary>
             Class to represent the Velociwrap
@@ -447,6 +579,32 @@
             Method to set this Velociwrap's cheese property to false.
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.ToString">
+            <summary>
+            Displays the name of the item
+            </summary>
+            <returns>The string value of the item name</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.IMenuItem">
+            <summary>
+            Interface that all menu items inherit from
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Price">
+            <summary>
+            Getter / setter for the price of the menu item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Calories">
+            <summary>
+            Getter / setter for the calories of the menu item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Ingredients">
+            <summary>
+            Getter / setter for the Ingredients of the menu item. 
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Sides.Fryceritops">
             <summary>
             Public class for the side item Fryceritops which inherits from the Side base class
@@ -471,6 +629,12 @@
             <summary>
             Public constructor for default order of Fryceritops.
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Fryceritops.ToString">
+            <summary>
+            Override of the ToString method 
+            </summary>
+            <returns>The size and name of this side item</returns>
         </member>
         <member name="T:DinoDiner.Menu.Sides.MeteorMacAndCheese">
             <summary>
@@ -497,6 +661,12 @@
             Public constructor for default order of Meteor Mac and cheese.
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Sides.MeteorMacAndCheese.ToString">
+            <summary>
+            Override of the ToString method 
+            </summary>
+            <returns>The size and name of this side item</returns>
+        </member>
         <member name="T:DinoDiner.Menu.Sides.MezzorellaSticks">
             <summary>
             Public class that represents Mezzorella sticks
@@ -521,6 +691,12 @@
             <summary>
             Public constructor for default order of Mezzorella sticks.
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.MezzorellaSticks.ToString">
+            <summary>
+            Override of the ToString method 
+            </summary>
+            <returns>The size and name of this side item</returns>
         </member>
         <member name="T:DinoDiner.Menu.Sides.Side">
             <summary>
@@ -572,9 +748,30 @@
             Public constructor for default order of Triceritops.
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Sides.Triceritots.ToString">
+            <summary>
+            Override of the ToString method 
+            </summary>
+            <returns>The size and name of this side item</returns>
+        </member>
         <member name="T:DinoDiner.Menu.Size">
             <summary>
             Enumerator representing the size of the item.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Size.Small">
+            <summary>
+            The size of a small item, cheapest price and lowest calories
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Size.Medium">
+            <summary>
+            The size of a medium item, has the median price and calories of the item type.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Size.Large">
+            <summary>
+            The largest size available for an item, contains the most calories and highest price.
             </summary>
         </member>
     </members>

@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Class to represent the Velociwrap
     /// </summary>
-    public class VelociWrap : Entree
+    public class VelociWrap : Entree, IMenuItem
     {
 
         private bool dressing = true;
@@ -63,7 +63,14 @@ namespace DinoDiner.Menu.Entrees
             this.cheese = false;
         }
 
-      
+        /// <summary>
+        /// Displays the name of the item
+        /// </summary>
+        /// <returns>The string value of the item name</returns>
+        public override string ToString()
+        {
+            return "Veloci-Wrap";
+        }
 
     }
 }

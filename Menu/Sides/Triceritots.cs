@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Sides
     /// <summary>
     /// Public class to represent the side dish Triceritops.
     /// </summary>
-    public class Triceritots : Side
+    public class Triceritots : Side, IMenuItem
     {
         /// <summary>
         /// Overrides the side class implementation of ingredients to display the side's ingredients
@@ -62,6 +62,15 @@ namespace DinoDiner.Menu.Sides
             this.Price = 0.99;
             this.Calories = 352;
 
+        }
+
+        /// <summary>
+        /// Override of the ToString method 
+        /// </summary>
+        /// <returns>The size and name of this side item</returns>
+        public override string ToString()
+        {
+            return ($"{size} Triceritots");
         }
     }
 }

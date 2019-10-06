@@ -7,18 +7,9 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the PterodactylWings
     /// </summary>
-    public class PterodactylWings
+    public class PterodactylWings : Entree, IMenuItem
     {
-        /// <summary>
-        /// Property used to get and set the value of the price.
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Property used to get and set the value of the calories.
-        /// </summary>
-        public uint Calories { get; set; }
-
+        
         /// <summary>
         /// Default constructor for PterodactylWings that sets default price and calories.
         /// </summary>
@@ -31,13 +22,22 @@ namespace DinoDiner.Menu.Entrees
         /// <summary>
         /// Property used to get and set the list of ingredients of the PterodactylWings
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
                 List<string> ingredients = new List<string>() { "Chicken", "Wing Sauce" };            
                 return ingredients;
             }
+        }
+
+        /// <summary>
+        /// Displays the name of the item
+        /// </summary>
+        /// <returns>The string value of the item name</returns>
+        public override string ToString()
+        {
+            return "Pterodactyl Wings";
         }
     }
 }

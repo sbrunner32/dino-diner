@@ -10,13 +10,25 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Public class for a CretaceousCombo
     /// </summary>
-    public class CretaceousCombo
+    public class CretaceousCombo : IMenuItem
     {
+        /// <summary>
+        /// The entree item of the combo
+        /// </summary>
         public Entree Entree { get; set; }
+        /// <summary>
+        /// The drink item of the combo
+        /// </summary>
         public Drink Drink { get; set; }
+        /// <summary>
+        /// The side item of the combo
+        /// </summary>
         public Side Side { get; set; }
 
         private Size size = Size.Small;
+        /// <summary>
+        /// The getter which sets the size of the items in the combo to ths size of the combo.
+        /// </summary>
         public Size Size
         {
             get { return size; }
@@ -28,6 +40,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// The price of the combo getter, returns the price of all items -0.25
+        /// </summary>
         public double Price
         {
             get
@@ -36,6 +51,9 @@ namespace DinoDiner.Menu
             }            
         }
 
+        /// <summary>
+        /// The getter of the combo's calories, returns the calories of entree + drink + side.
+        /// </summary>
         public uint Calories
         {
             get
@@ -44,6 +62,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// The getter of the ingredients of the combo. 
+        /// </summary>
         public List<string> Ingredients
         {
             get
@@ -55,20 +76,29 @@ namespace DinoDiner.Menu
                 return ingredients;
             }
         }
-
+        /// <summary>
+        /// The public override to return the contents of the combo as a string. 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
-            return $"";
+            return (Entree.ToString() + " Combo");
         }
 
         private CretaceousCombo() { }
 
+        /// <summary>
+        /// Public constructor for CretaceousCombo which sets the entree while using default side and drink values.
+        /// </summary>
+        /// <param name="entree">The entree item to set for this CretaceousCombo</param>
         public CretaceousCombo(Entree entree)
         {
             Entree = entree;
             Side = new Fryceritops();
-            Drink = new Sodasauras();
+            Drink = new Sodasaurus();
         }
+
+
 
 
     }

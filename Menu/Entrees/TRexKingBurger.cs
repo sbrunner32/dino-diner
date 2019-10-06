@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the TRexKingBurger entree.
     /// </summary>
-    public class TRexKingBurger : Entree
+    public class TRexKingBurger : Entree, IMenuItem
     {
         private bool bun = true;
         private bool lettuce = true;
@@ -111,6 +111,14 @@ namespace DinoDiner.Menu.Entrees
         {
             this.mayo = false;
         }
-
+        
+        /// <summary>
+        /// Displays the name of the item
+        /// </summary>
+        /// <returns>The string value of the item name</returns>
+        public override string ToString()
+        {
+            return "T-Rex King Burger";
+        }
     }
 }

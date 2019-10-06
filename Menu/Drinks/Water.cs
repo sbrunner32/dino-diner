@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// Class to represent Water which inherits from the Drink class
     /// </summary>
-    public class Water : Drink
+    public class Water : Drink, IMenuItem
     {
         /// <summary>
         /// Public getter and setter that stores whether or not the Tyrannotea has lemon, defaults to false
@@ -50,6 +50,15 @@ namespace DinoDiner.Menu.Drinks
         public void AddLemon()
         {
             this.Lemon = true;
+        }
+
+        /// <summary>
+        /// Override of the ToString method 
+        /// </summary>
+        /// <returns>The size and name of this side item</returns>
+        public override string ToString()
+        {
+            return ($"{Size} Water");
         }
 
     }

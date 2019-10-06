@@ -5,7 +5,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the Prehistoric PBJ sandwich.
     /// </summary>
-    public class PrehistoricPBJ : Entree
+    public class PrehistoricPBJ : Entree, IMenuItem 
     {
         private bool peanutButter = true;
         private bool jelly = true;
@@ -48,6 +48,15 @@ namespace DinoDiner.Menu.Entrees
         public void HoldJelly()
         {
             this.jelly = false;
+        }
+
+        /// <summary>
+        /// Displays the name of the item
+        /// </summary>
+        /// <returns>The string value of the item name</returns>
+        public override string ToString()
+        {
+            return "Prehistoric PB&J";
         }
     }
 }

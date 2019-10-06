@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// Class for JurrasicJava that inherits from the Drink class
     /// </summary>
-    public class JurrasicJava : Drink
+    public class JurassicJava : Drink, IMenuItem
     {
         /// <summary>
         /// Public property to determine if the coffee is decaf or not, default value of false
@@ -65,7 +65,7 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// Public constructor for the Sodasauras class that sets default values and inherits from the drink constructor
         /// </summary>
-        public JurrasicJava() : base()
+        public JurassicJava() : base()
         {
             this.Price = 0.59;
             this.Calories = 2;
@@ -87,6 +87,18 @@ namespace DinoDiner.Menu.Drinks
         public void LeaveRoomForCream()
         {
             this.RoomForCream = true;
+        }
+
+        /// <summary>
+        /// Override of the ToString method 
+        /// </summary>
+        /// <returns>The name of this drink</returns>
+        public override string ToString()
+        {
+            if(Decaf)            
+                return ($"{size} Decaf Jurassic Java");        
+            else
+                return ($"{size} Jurassic Java");
         }
     }
 }

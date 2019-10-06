@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Sides
     /// <summary>
     /// Public class for the side item Fryceritops which inherits from the Side base class
     /// </summary>
-    public class Fryceritops : Side
+    public class Fryceritops : Side, IMenuItem
     {
         /// <summary>
         /// Overrides the side class implementation of ingredients to display the side's ingredients
@@ -60,8 +60,16 @@ namespace DinoDiner.Menu.Sides
         {
             this.Price = 0.99;
             this.Calories = 222;
-            this.size = Size.Small;
-            
+            this.size = Size.Small;            
+        }
+
+        /// <summary>
+        /// Override of the ToString method 
+        /// </summary>
+        /// <returns>The size and name of this side item</returns>
+        public override string ToString()
+        {
+            return ($"{size} Friceritops");
         }
     }
 }

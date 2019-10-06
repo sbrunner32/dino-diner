@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// Class for Tyrannotea that inherits from the Drink class
     /// </summary>
-    public class Tyrannotea : Drink
+    public class Tyrannotea : Drink, IMenuItem
     {
         /// <summary>
         /// Protected property for whether or not the Tea is sweet. 
@@ -110,6 +110,19 @@ namespace DinoDiner.Menu.Drinks
         public void AddLemon()
         {
             this.Lemon = true;
+        }
+
+        /// <summary>
+        /// Override of the ToString method 
+        /// </summary>
+        /// <returns>The size and name of this side item</returns>
+        public override string ToString()
+        {
+            if(sweet)
+                return ($"{size} Sweet Tyrannotea");
+            else
+                return ($"{size} Tyrannotea");
+
         }
     }
 }

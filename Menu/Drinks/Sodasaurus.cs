@@ -7,17 +7,17 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// Class for Sodasauras that inherits from the Drink class
     /// </summary>
-    public class Sodasauras : Drink
+    public class Sodasaurus : Drink, IMenuItem
     {
         /// <summary>
         /// Private backing property for the flavor of this Sodasauras
         /// </summary>
-        private SodasaurasFlavor flavor = SodasaurasFlavor.Cola;
+        private SodasaurusFlavor flavor = SodasaurusFlavor.Cola;
 
         /// <summary>
         /// Property to store the flavor of this Sodasauras
         /// </summary>
-        public SodasaurasFlavor Flavor {
+        public SodasaurusFlavor Flavor {
             get
             {
                 return flavor;
@@ -75,7 +75,7 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// Public constructor for the Sodasauras class that sets default values and inherits from the drink constructor
         /// </summary>
-        public Sodasauras() : base()
+        public Sodasaurus() : base()
         {
             this.Price = 1.50;
             this.Calories = 112;
@@ -83,6 +83,15 @@ namespace DinoDiner.Menu.Drinks
 
         }
 
-        
+        /// <summary>
+        /// Override of the ToString method 
+        /// </summary>
+        /// <returns>The size, flavor, and name of this side item</returns>
+        public override string ToString()
+        {
+            return ($"{size} {flavor} Sodasaurus");
+        }
+
+
     }
 }
