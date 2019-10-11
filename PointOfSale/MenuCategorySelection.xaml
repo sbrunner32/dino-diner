@@ -9,6 +9,13 @@
       Title="Menu Category Selection">
 
     <Grid>
+        <Grid.Resources>
+            <!--Style property to set margins and border thickness for the buttons-->
+            <Style TargetType="Button">               
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+        </Grid.Resources>        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
