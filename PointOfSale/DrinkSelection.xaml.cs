@@ -28,5 +28,45 @@ namespace PointOfSale
         {
             NavigationService.Navigate(new FlavorSelection());
         }
+
+        private void SelectSodasaurus(object sender, RoutedEventArgs args)
+        {
+            btnSelectFlavor.Visibility = Visibility.Visible;
+            btnHoldIce.Visibility = Visibility.Visible;
+            btnAddLemon.Visibility = Visibility.Collapsed;
+            btnAddIce.Visibility = Visibility.Collapsed;
+            btnAddDecaf.Visibility = Visibility.Collapsed;
+            btnAddSweet.Visibility = Visibility.Collapsed;
+        }
+
+        private void SelectTyrannotea(object sender, RoutedEventArgs args)
+        {
+            btnSelectFlavor.Visibility = Visibility.Collapsed;
+            btnHoldIce.Visibility = Visibility.Collapsed;
+            btnAddLemon.Visibility = Visibility.Visible;
+            btnAddIce.Visibility = Visibility.Collapsed;
+            btnAddDecaf.Visibility = Visibility.Collapsed;
+            btnAddSweet.Visibility = Visibility.Visible;
+        }
+
+        private void SelectJurassicJava(object sender, RoutedEventArgs args)
+        {
+            btnSelectFlavor.Visibility = Visibility.Collapsed;
+            btnHoldIce.Visibility = Visibility.Collapsed;
+            btnAddLemon.Visibility = Visibility.Collapsed;
+            btnAddIce.Visibility = Visibility.Visible;
+            btnAddDecaf.Visibility = Visibility.Visible;
+            btnAddSweet.Visibility = Visibility.Collapsed;
+        }
+
+        private void SelectWater(object sender, RoutedEventArgs args)
+        {
+            btnSelectFlavor.Visibility = Visibility.Collapsed;
+            btnHoldIce.Visibility = Visibility.Visible;
+            btnAddLemon.Visibility = Visibility.Visible;
+            btnAddIce.Visibility = Visibility.Collapsed;
+            btnAddDecaf.Visibility = Visibility.Collapsed;
+            btnAddSweet.Visibility = Visibility.Collapsed;
+        }
     }
 }

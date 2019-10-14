@@ -68,27 +68,27 @@
         <!-- This is the StackPanel which contains the Size buttons-->
         <StackPanel Orientation="Vertical" Width="200">
             <Label Foreground="Black" HorizontalAlignment="Center">Size</Label>
-            <Button>
+            <RadioButton HorizontalAlignment="Center">
                 <DockPanel Height="90">
-                    <TextBlock FontSize="40" VerticalAlignment="Center" DockPanel.Dock="Bottom">
+                    <TextBlock FontSize="40"  DockPanel.Dock="Bottom">
                         Small
                     </TextBlock>
                 </DockPanel>
-            </Button>
-            <Button>
+            </RadioButton>
+            <RadioButton HorizontalAlignment="Center">
                 <DockPanel Height="90">
-                    <TextBlock FontSize="40" VerticalAlignment="Center" DockPanel.Dock="Bottom">
+                    <TextBlock FontSize="40" DockPanel.Dock="Bottom">
                         Medium
                     </TextBlock>
                 </DockPanel>
-            </Button>
-            <Button>
+            </RadioButton>
+            <RadioButton HorizontalAlignment="Center">
                 <DockPanel Height="90">
-                    <TextBlock FontSize="40" VerticalAlignment="Center" DockPanel.Dock="Bottom">
+                    <TextBlock FontSize="40" DockPanel.Dock="Bottom">
                         Large
                     </TextBlock>
                 </DockPanel>
-            </Button>
+            </RadioButton>
         </StackPanel>
         <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Add To Order</Label>
     </StackPanel>
