@@ -9,12 +9,57 @@
       Title="DrinkSelection">
 
     <StackPanel>
-        <Label FontSize="16" Foreground="White" HorizontalAlignment="Center">Add To Order</Label>
+        <StackPanel.Resources>
+            <!--Style property to set margins and border thickness for the buttons-->
+            <Style TargetType="Button">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </StackPanel.Resources>
+        <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Add To Order</Label>
         <StackPanel Orientation="Horizontal">
-            <StackPanel>
+            <!-- This Vertically-orientated StackPanel contains all the drink choice buttons-->
+            <StackPanel>                
                 <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Drink</Label>
                 <Button>
-                    
+                    Sodasauras
+                </Button>
+                <Button>
+                   Tyrannotea
+                </Button>
+                <Button>
+                    Jurrasic Java
+                </Button>
+                <Button>
+                    Water
+                </Button>
+            </StackPanel>
+            <!-- This StackPanel contains all the Size options for the drinks.-->
+            <StackPanel>
+                <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Size</Label>
+                <Button Height="70">
+                    Small
+                </Button>
+                <Button Height="70">
+                    Medium
+                </Button>
+                <Button Height="70">
+                    Large
+                </Button>                
+            </StackPanel>
+
+            <!-- This StackPanel contains all the special options for the drinks.-->
+            <StackPanel>
+                <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Special</Label>
+                <Button Click="SelectFlavor" Height="70">
+                    Sweet/Decaf/Flavor
+                </Button>
+                <Button Height="70">
+                    Add Lemon
+                </Button>
+                <Button Height="70">
+                    Hold Ice
                 </Button>
             </StackPanel>
         </StackPanel>

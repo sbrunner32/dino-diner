@@ -21,9 +21,9 @@
             <StackPanel.Resources>
                 <!--Style property to set margins and border thickness for the buttons-->
                 <Style TargetType="Button">
-                    <Setter Property="FontSize" Value="36"/>
-                    <Setter Property="Width" Value="200"/>
-                    <Setter Property="Margin" Value="20"/>
+                    <Setter Property="FontSize" Value="24"/>
+                    <Setter Property="Width" Value="150"/>
+                    <Setter Property="Margin" Value="10"/>
                 </Style>
             </StackPanel.Resources>
 
