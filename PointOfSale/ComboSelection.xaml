@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:PointOfSale"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ComboSelection">
+      Title="ComboSelection" Height="450" >
 <!--WrapPanel that makes up the group of buttons to select a combo for order-->
     <WrapPanel>
         <WrapPanel.Resources>

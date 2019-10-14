@@ -16,23 +16,80 @@
                 <Setter Property="Margin" Value="5"/>
             </Style>
         </StackPanel.Resources>
-
+        
+        <!-- This is the stackPanel which contains the side items-->
         <StackPanel Orientation="Vertical" Width="200">
             <StackPanel.Resources>
                 
             </StackPanel.Resources>
+            <Label Foreground="Black" HorizontalAlignment="Center">Sides</Label>
             <Button>
-                Fryceritops
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/DinoDiner-08.png"/>
+                </Button.Background>
+                <DockPanel Height="80">
+                    <TextBlock DockPanel.Dock="Bottom">
+                    Fryceritops
+                    </TextBlock>
+                </DockPanel>
             </Button>
             <Button>
-                Triceritots
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/DinoDiner-11.png"/>
+                </Button.Background>
+                <DockPanel Height="80">
+                    <TextBlock DockPanel.Dock="Bottom">
+                    Tryceritots
+                    </TextBlock>
+                </DockPanel>
             </Button>
             <Button>
-                Mezzorella Sticks
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/DinoDiner-10.png"/>
+                </Button.Background>
+                <DockPanel Height="80">
+                    <TextBlock DockPanel.Dock="Bottom">
+                    Mezzorella Sticks
+                    </TextBlock>
+                </DockPanel>
             </Button>
             <Button>
-                Meteor Mac and Cheese
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/DinoDiner-09.png"/>
+                </Button.Background>
+                <DockPanel Height="80">
+                    <TextBlock DockPanel.Dock="Bottom">
+                    Meteor Mac and Cheese
+                    </TextBlock>
+                </DockPanel>
             </Button>
         </StackPanel>
+
+        <!-- This is the StackPanel which contains the Size buttons-->
+        <StackPanel Orientation="Vertical" Width="200">
+            <Label Foreground="Black" HorizontalAlignment="Center">Size</Label>
+            <Button>
+                <DockPanel Height="90">
+                    <TextBlock FontSize="40" VerticalAlignment="Center" DockPanel.Dock="Bottom">
+                        Small
+                    </TextBlock>
+                </DockPanel>
+            </Button>
+            <Button>
+                <DockPanel Height="90">
+                    <TextBlock FontSize="40" VerticalAlignment="Center" DockPanel.Dock="Bottom">
+                        Medium
+                    </TextBlock>
+                </DockPanel>
+            </Button>
+            <Button>
+                <DockPanel Height="90">
+                    <TextBlock FontSize="40" VerticalAlignment="Center" DockPanel.Dock="Bottom">
+                        Large
+                    </TextBlock>
+                </DockPanel>
+            </Button>
+        </StackPanel>
+        <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Add To Order</Label>
     </StackPanel>
 </Page>
