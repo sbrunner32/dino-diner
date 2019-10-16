@@ -1,14 +1,50 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
     /// <summary>
     /// Public class for the Prehistoric PBJ sandwich.
     /// </summary>
-    public class PrehistoricPBJ : Entree, IMenuItem 
+    public class PrehistoricPBJ : Entree, IMenuItem, INotifyPropertyChanged
     {
         private bool peanutButter = true;
         private bool jelly = true;
+
+        /// <summary>
+        /// The PropertyChanged Event handler; notifies
+        /// of changes to the Price, Description, and 
+        /// Special properties.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        //Helper function for notifying of property changes
+        private void NotifyOfPropertyChange(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Gets and sets the text description of the Prehistoric PB&J
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!peanutButter) special.Add("Hold Peanut Butter");
+                if (!jelly) special.Add("Hold Jelly");
+                return special.ToArray();
+            }
+        }
 
        
         /// <summary>
@@ -40,6 +76,8 @@ namespace DinoDiner.Menu.Entrees
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
 
         /// <summary>
@@ -48,6 +86,8 @@ namespace DinoDiner.Menu.Entrees
         public void HoldJelly()
         {
             this.jelly = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
 
         /// <summary>

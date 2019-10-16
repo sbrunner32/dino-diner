@@ -39,10 +39,33 @@ namespace DinoDiner.Menu.Drinks
                 return new List<string>() { "Water", "Natural Flavors", "Cane Sugar" };
             }
         }
+
+        /// <summary>
+        /// Gets a description of the order item
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        /// <summary>
+        /// Gets any special instructions for this menu item
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!Ice) special.Add("Hold Ice");
+                return special.ToArray();
+            }
+        }
+
         /// <summary>
         /// Protected size quanity of this Sodasauras
         /// </summary>
         protected Size size;
+
         /// <summary>
         /// Override to get and set the size of the Sodasauras and the according calorie and price values
         /// </summary>

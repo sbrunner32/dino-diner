@@ -16,12 +16,12 @@
         </member>
         <member name="P:DinoDiner.Menu.CretaceousCombo.Drink">
             <summary>
-            The drink item of the combo
+            The drink item of the combo, defaults to Sodasaurus
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.CretaceousCombo.Side">
             <summary>
-            The side item of the combo
+            The side item of the combo, defaults to Fryceritops
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.CretaceousCombo.Size">
@@ -55,6 +55,16 @@
             Public constructor for CretaceousCombo which sets the entree while using default side and drink values.
             </summary>
             <param name="entree">The entree item to set for this CretaceousCombo</param>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Description">
+            <summary>
+            Description of the combo item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Special">
+            <summary>
+            List of special instructions for the combo item.
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.Drinks.Drink">
             <summary>
@@ -200,6 +210,16 @@
         <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Ingredients">
             <summary>
             Public override property to set/get the list of ingredients
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Description">
+            <summary>
+            Gets a description of the order item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Special">
+            <summary>
+            Gets any special instructions for this menu item
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Drinks.Sodasaurus.size">
@@ -398,6 +418,19 @@
         <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
             <summary>
             Public class for the Prehistoric PBJ sandwich.
+            </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.Entrees.PrehistoricPBJ.PropertyChanged">
+            <summary>
+            The PropertyChanged Event handler; notifies
+            of changes to the Price, Description, and 
+            Special properties.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Description" -->
+        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Special">
+            <summary>
+            Gets any special preparation instructions
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">

@@ -17,13 +17,13 @@ namespace DinoDiner.Menu
         /// </summary>
         public Entree Entree { get; set; }
         /// <summary>
-        /// The drink item of the combo
+        /// The drink item of the combo, defaults to Sodasaurus
         /// </summary>
-        public Drink Drink { get; set; }
+        public Drink Drink { get; set; } = new Sodasaurus();
         /// <summary>
-        /// The side item of the combo
+        /// The side item of the combo, defaults to Fryceritops
         /// </summary>
-        public Side Side { get; set; }
+        public Side Side { get; set; } = new Fryceritops();
 
         private Size size = Size.Small;
         /// <summary>
@@ -82,7 +82,7 @@ namespace DinoDiner.Menu
         /// <returns></returns>
         public override string ToString()
         {
-            return (Entree.ToString() + " Combo");
+            return ($"{Entree} Combo");
         }
 
         private CretaceousCombo() { }
@@ -93,12 +93,36 @@ namespace DinoDiner.Menu
         /// <param name="entree">The entree item to set for this CretaceousCombo</param>
         public CretaceousCombo(Entree entree)
         {
-            Entree = entree;
-            Side = new Fryceritops();
-            Drink = new Sodasaurus();
+            Entree = entree;           
         }
 
-
+        /// <summary>
+        /// Description of the combo item
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+        
+        /// <summary>
+        /// List of special instructions for the combo item.
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                //Add all the side's specials to the list, then add drink special
+                //Add special functionality to menu items to add commented code back
+                //Can replace .ToString() calls with Description once Description is implemented. 
+                List<string> special = new List<string>();
+                //special.AddRange(Entree.Special);
+                special.Add(Side.ToString());
+                //special.AddRange(Side.Special);
+                special.Add(Drink.ToString());
+                //special.AddRange(Drink.Special);
+                return special.ToArray();
+            }
+        }
 
 
     }
