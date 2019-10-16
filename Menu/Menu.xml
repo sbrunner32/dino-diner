@@ -335,6 +335,16 @@
             Public class for the Brontowurst sandwich
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Description">
+            <summary>
+            Gets and sets the text description of the Menu item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Special">
+            <summary>
+            Gets any special preparation instructions
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Ingredients">
             <summary>
             Property used to get and set the list of ingredients on this Brontowurst sandwich.
@@ -400,6 +410,19 @@
             Class representing an entree item from the menu with calories and price
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Entrees.Entree.PropertyChanged">
+            <summary>
+            The PropertyChanged Event handler; notifies
+            of changes to the Price, Description, and 
+            Special properties.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.Entree.NotifyOfPropertyChange(System.String)">
+            <summary>
+            Helper function for notifying of property changes
+            </summary>
+            <param name="propertyName">Name of property changed</param>
+        </member>
         <member name="P:DinoDiner.Menu.Entrees.Entree.Price">
             <summary>
             Gets and sets the price
@@ -418,13 +441,6 @@
         <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
             <summary>
             Public class for the Prehistoric PBJ sandwich.
-            </summary>
-        </member>
-        <member name="E:DinoDiner.Menu.Entrees.PrehistoricPBJ.PropertyChanged">
-            <summary>
-            The PropertyChanged Event handler; notifies
-            of changes to the Price, Description, and 
-            Special properties.
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Description" -->

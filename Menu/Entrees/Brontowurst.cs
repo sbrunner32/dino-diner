@@ -1,17 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
     /// <summary>
     /// Public class for the Brontowurst sandwich
     /// </summary>
-    public class Brontowurst : Entree, IMenuItem
+    public class Brontowurst : Entree, IMenuItem, INotifyPropertyChanged
     {
         private bool bun = true;
         private bool pepper = true;
         private bool onion = true;
 
+        
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!bun) special.Add("Hold Bun");
+                if (!pepper) special.Add("Hold Peppers");
+                if (!onion) special.Add("Hold Onions");
+                return special.ToArray();
+            }
+        }
 
         /// <summary>
         /// Property used to get and set the list of ingredients on this Brontowurst sandwich.

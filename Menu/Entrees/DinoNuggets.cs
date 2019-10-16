@@ -7,8 +7,21 @@ namespace DinoDiner.Menu.Entrees
     /// Public class for the DinoNuggets entree.
     /// </summary>
     public class DinoNuggets : Entree, IMenuItem
-    {
-        private int nuggetCount { get; set; }    
+    {        
+        private int nuggetCount { get; set; }
+
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (nuggetCount > 6) special.Add($"{nuggetCount-6} Extra Nuggets");
+                return special.ToArray();
+            }
+        }
 
         /// <summary>
         /// Property used to get and set the list of ingredients on this order of DinoNuggets.

@@ -9,28 +9,7 @@ namespace DinoDiner.Menu.Entrees
     public class PrehistoricPBJ : Entree, IMenuItem, INotifyPropertyChanged
     {
         private bool peanutButter = true;
-        private bool jelly = true;
-
-        /// <summary>
-        /// The PropertyChanged Event handler; notifies
-        /// of changes to the Price, Description, and 
-        /// Special properties.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        //Helper function for notifying of property changes
-        private void NotifyOfPropertyChange(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        /// <summary>
-        /// Gets and sets the text description of the Prehistoric PB&J
-        /// </summary>
-        public string Description
-        {
-            get { return this.ToString(); }
-        }
+        private bool jelly = true;      
 
         /// <summary>
         /// Gets any special preparation instructions
