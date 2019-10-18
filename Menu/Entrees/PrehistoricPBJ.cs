@@ -6,7 +6,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the Prehistoric PBJ sandwich.
     /// </summary>
-    public class PrehistoricPBJ : Entree, IMenuItem, INotifyPropertyChanged
+    public class PrehistoricPBJ : Entree, IMenuItem, INotifyPropertyChanged, IOrderItem
     {
         private bool peanutButter = true;
         private bool jelly = true;      
@@ -14,7 +14,7 @@ namespace DinoDiner.Menu.Entrees
         /// <summary>
         /// Gets any special preparation instructions
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

@@ -18,7 +18,27 @@ namespace DinoDiner.Menu.Entrees
         private bool mustard = true;
         private bool mayo = true;
 
-        
+
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!bun) special.Add("Hold Whole Wheat Bun");
+                if (!lettuce) special.Add("Hold Lettuce");
+                if (!tomato) special.Add("Hold Tomato");
+                if (!onion) special.Add("Hold Onion");
+                if (!pickle) special.Add("Hold Pickle");
+                if (!ketchup) special.Add("Hold Ketchup");
+                if (!mustard) special.Add("Hold Mustard");
+                if (!mayo) special.Add("Hold Mayonaise");
+                return special.ToArray();
+            }
+        }
+
         /// <summary>
         /// Property used to get and set the list of ingredients on this TRexKingBurger.
         /// </summary>

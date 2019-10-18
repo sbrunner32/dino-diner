@@ -7,13 +7,28 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Class to represent the Velociwrap
     /// </summary>
-    public class VelociWrap : Entree, IMenuItem
+    public class VelociWrap : Entree, IMenuItem, IOrderItem
     {
 
         private bool dressing = true;
         private bool lettuce = true;
         private bool cheese = true;
 
+
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!dressing) special.Add("Hold Caesar Dressing");
+                if (!lettuce) special.Add("Hold Lettuce");
+                if (!cheese) special.Add("Hold Cheese");
+                return special.ToArray();
+            }
+        }
 
         /// <summary>
         /// Property used to get and set the list of ingredients on this Velociwrap.

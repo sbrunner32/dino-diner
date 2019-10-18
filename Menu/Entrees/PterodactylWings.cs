@@ -9,7 +9,19 @@ namespace DinoDiner.Menu.Entrees
     /// </summary>
     public class PterodactylWings : Entree, IMenuItem
     {
-        
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
+        }
+
+
         /// <summary>
         /// Default constructor for PterodactylWings that sets default price and calories.
         /// </summary>
@@ -39,5 +51,8 @@ namespace DinoDiner.Menu.Entrees
         {
             return "Pterodactyl Wings";
         }
+
+
+        
     }
 }

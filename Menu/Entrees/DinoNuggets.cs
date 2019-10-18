@@ -6,7 +6,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the DinoNuggets entree.
     /// </summary>
-    public class DinoNuggets : Entree, IMenuItem
+    public class DinoNuggets : Entree, IMenuItem, IOrderItem
     {        
         private int nuggetCount { get; set; }
 
@@ -67,6 +67,15 @@ namespace DinoDiner.Menu.Entrees
         public override string ToString()
         {
             return "Dino-Nuggets";
+        }
+
+        /// <summary>
+        /// Text description of the food item
+        /// </summary>
+        /// <returns>The ToString implementation of this object</returns>
+        public string Description()
+        {
+            return this.ToString();
         }
 
     }

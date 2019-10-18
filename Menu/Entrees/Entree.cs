@@ -11,7 +11,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Class representing an entree item from the menu with calories and price
     /// </summary>
-    public abstract class Entree : INotifyPropertyChanged
+    public abstract class Entree : INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// The PropertyChanged Event handler; notifies
@@ -52,5 +52,12 @@ namespace DinoDiner.Menu.Entrees
         {
             get { return this.ToString(); }
         }
+
+        /// <summary>
+        /// Virtual property for all the special instructions. 
+        /// </summary>
+        public virtual string[] Special { get; }
+
+        
     }
 }

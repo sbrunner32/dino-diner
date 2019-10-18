@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the Brontowurst sandwich
     /// </summary>
-    public class Brontowurst : Entree, IMenuItem, INotifyPropertyChanged
+    public class Brontowurst : Entree, IMenuItem, INotifyPropertyChanged, IOrderItem
     {
         private bool bun = true;
         private bool pepper = true;

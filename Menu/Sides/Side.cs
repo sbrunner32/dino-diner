@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Sides
     /// <summary>
     /// Class representing a side item from the menu
     /// </summary>
-    public abstract class Side : INotifyPropertyChanged
+    public abstract class Side : INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// The PropertyChanged Event handler; notifies
@@ -54,5 +54,7 @@ namespace DinoDiner.Menu.Sides
         {
             get { return this.ToString(); }
         }
+
+        public string[] Special { get; }
     }
 }

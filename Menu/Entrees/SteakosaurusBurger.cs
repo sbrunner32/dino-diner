@@ -7,12 +7,28 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Public class for the SteakosaurasBurger entree.
     /// </summary>
-    public class SteakosaurusBurger : Entree, IMenuItem 
+    public class SteakosaurusBurger : Entree, IMenuItem, IOrderItem
     {
         private bool bun = true;        
         private bool pickle = true;
         private bool ketchup = true;
         private bool mustard = true;
+
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!bun) special.Add("Hold Whole Wheat Bun");
+                if (!pickle) special.Add("Hold Pickle");
+                if (!ketchup) special.Add("Hold Ketchup");
+                if (!mustard) special.Add("Hold Mustard");
+                return special.ToArray();
+            }
+        }
 
         /// <summary>
         /// Property used to get and set the list of ingredients on this SteakosaurasBurger.
@@ -79,6 +95,8 @@ namespace DinoDiner.Menu.Entrees
         {
             return "Steakosaurus Burger";
         }
+
+
 
     }
 }
