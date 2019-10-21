@@ -1,14 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu.Drinks
 {
     /// <summary>
     /// Class for JurrasicJava that inherits from the Drink class
     /// </summary>
-    public class JurassicJava : Drink, IMenuItem
+    public class JurassicJava : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (RoomForCream) special.Add("Room for Cream");
+                if (Ice) special.Add("Add Ice");
+                return special.ToArray();
+            }
+        }
+
         /// <summary>
         /// Public property to determine if the coffee is decaf or not, default value of false
         /// </summary>
@@ -56,6 +71,9 @@ namespace DinoDiner.Menu.Drinks
                         this.Price = 1.49;
                         break;
                 }
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Description");
             }
             get
             {

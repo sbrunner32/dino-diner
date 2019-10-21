@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu.Drinks
 {
     /// <summary>
     /// Class for Sodasauras that inherits from the Drink class
     /// </summary>
-    public class Sodasaurus : Drink, IMenuItem
+    public class Sodasaurus : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Private backing property for the flavor of this Sodasauras
@@ -40,18 +41,11 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
-        /// <summary>
-        /// Gets a description of the order item
-        /// </summary>
-        public string Description
-        {
-            get { return this.ToString(); }
-        }
 
         /// <summary>
         /// Gets any special instructions for this menu item
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {
@@ -89,6 +83,9 @@ namespace DinoDiner.Menu.Drinks
                         this.Price = 2.50;
                         break;
                 }
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Description");
             }
             get
             {

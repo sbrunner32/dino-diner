@@ -93,7 +93,7 @@ namespace DinoDiner.Menu.Entrees
         {
             this.mustard = false;
             NotifyOfPropertyChange("Special");
-            NotifyOfPropertyChange("Ingredients");s
+            NotifyOfPropertyChange("Ingredients");
         }
 
         /// <summary>

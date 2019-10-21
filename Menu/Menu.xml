@@ -71,6 +71,19 @@
             Abstract class to denote a drink item from the menu.
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Drinks.Drink.PropertyChanged">
+            <summary>
+            The PropertyChanged Event handler; notifies
+            of changes to the Price, Description, and 
+            Special properties.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Drink.NotifyOfPropertyChange(System.String)">
+            <summary>
+            Helper function for notifying of property changes
+            </summary>
+            <param name="propertyName">Name of property changed</param>
+        </member>
         <member name="P:DinoDiner.Menu.Drinks.Drink.Price">
             <summary>
             Gets and sets the price
@@ -101,9 +114,24 @@
             Public method to set the Ice property to false (requesting no Ice on a drink)
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Description">
+            <summary>
+            Gets the text description of the menu item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Special">
+            <summary>
+            Virtual property for all the special instructions. 
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Drinks.JurassicJava">
             <summary>
             Class for JurrasicJava that inherits from the Drink class
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurassicJava.Special">
+            <summary>
+            Gets any special preparation instructions
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Drinks.JurassicJava.Decaf">
@@ -210,11 +238,6 @@
         <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Ingredients">
             <summary>
             Public override property to set/get the list of ingredients
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Description">
-            <summary>
-            Gets a description of the order item
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Special">
@@ -335,11 +358,6 @@
             Public class for the Brontowurst sandwich
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Description">
-            <summary>
-            Gets and sets the text description of the Menu item
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Special">
             <summary>
             Gets any special preparation instructions
@@ -379,6 +397,11 @@
         <member name="T:DinoDiner.Menu.Entrees.DinoNuggets">
             <summary>
             Public class for the DinoNuggets entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Special">
+            <summary>
+            Gets any special preparation instructions
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Ingredients">
@@ -438,12 +461,21 @@
             Gets the ingredients list
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Description">
+            <summary>
+            Gets the text description of the menu item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Special">
+            <summary>
+            Virtual property for all the special instructions. 
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
             <summary>
             Public class for the Prehistoric PBJ sandwich.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Description" -->
         <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Special">
             <summary>
             Gets any special preparation instructions
@@ -480,6 +512,11 @@
             Public class for the PterodactylWings
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Special">
+            <summary>
+            Gets any special preparation instructions
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Entrees.PterodactylWings.#ctor">
             <summary>
             Default constructor for PterodactylWings that sets default price and calories.
@@ -499,6 +536,11 @@
         <member name="T:DinoDiner.Menu.Entrees.SteakosaurusBurger">
             <summary>
             Public class for the SteakosaurasBurger entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Special">
+            <summary>
+            Gets any special preparation instructions
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Ingredients">
@@ -540,6 +582,11 @@
         <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
             <summary>
             Public class for the TRexKingBurger entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Special">
+            <summary>
+            Gets any special preparation instructions
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Ingredients">
@@ -603,6 +650,11 @@
             Class to represent the Velociwrap
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Special">
+            <summary>
+            Gets any special preparation instructions
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">
             <summary>
             Property used to get and set the list of ingredients on this Velociwrap.
@@ -654,6 +706,31 @@
             Getter / setter for the Ingredients of the menu item. 
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Description">
+            <summary>
+            Contains a text description of the order item
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.IOrderItem">
+            <summary>
+            Interface for an item that is ordered.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Price">
+            <summary>
+            The price of the order item in dollars.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Description">
+            <summary>
+            Contains a text description of the order item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Special">
+            <summary>
+            Array containing any special requests/instructions for the order item
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Menu">
             <summary>
             Public class to represent the menu of the restaurant.
@@ -690,9 +767,44 @@
             </summary>
             <returns>Full list of all menu items separated by new line characters. </returns>
         </member>
+        <member name="T:DinoDiner.Menu.Order">
+            <summary>
+            An order of various food and drink items
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.Items">
+            <summary>
+            The items that make up this order.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.SubtotalCost">
+            <summary>
+            Subtotal of the order's cost before Tax
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.SalesTaxRate">
+            <summary>
+            Gets the Sales tax rate of the order
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.SalesTaxCost">
+            <summary>
+            Gets the cost of sales tax for this order
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Order.TotalCost">
+            <summary>
+            Gets the total cost of this order
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Sides.Fryceritops">
             <summary>
             Public class for the side item Fryceritops which inherits from the Side base class
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Special">
+            <summary>
+            Gets any special preparation instructions
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Sides.Fryceritops.Ingredients">
@@ -726,6 +838,11 @@
             Public class for the side Meteor Mac and Cheese
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Special">
+            <summary>
+            Gets any special preparation instructions
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Ingredients">
             <summary>
             Overrides the side class implementation of ingredients to display the side's ingredients
@@ -755,6 +872,11 @@
         <member name="T:DinoDiner.Menu.Sides.MezzorellaSticks">
             <summary>
             Public class that represents Mezzorella sticks
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Special">
+            <summary>
+            Gets any special preparation instructions
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Ingredients">
@@ -788,6 +910,19 @@
             Class representing a side item from the menu
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Sides.Side.PropertyChanged">
+            <summary>
+            The PropertyChanged Event handler; notifies
+            of changes to the Price, Description, and 
+            Special properties.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Side.NotifyOfPropertyChange(System.String)">
+            <summary>
+            Helper function for notifying of property changes
+            </summary>
+            <param name="propertyName">Name of property changed</param>
+        </member>
         <member name="P:DinoDiner.Menu.Sides.Side.Price">
             <summary>
             Gets and sets the price
@@ -808,9 +943,24 @@
             Gets or sets the size
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Description">
+            <summary>
+            Gets the text description of the menu item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Special">
+            <summary>
+            Array of all special instructions for the Side item
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Sides.Triceritots">
             <summary>
             Public class to represent the side dish Triceritops.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Triceritots.Special">
+            <summary>
+            Gets any special preparation instructions
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Sides.Triceritots.Ingredients">

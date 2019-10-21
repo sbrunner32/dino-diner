@@ -87,6 +87,9 @@ namespace DinoDiner.Menu.Drinks
                             this.Calories *= 2;
                         break;
                 }
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Description");
             }
             get
             {
@@ -110,6 +113,7 @@ namespace DinoDiner.Menu.Drinks
         public void AddLemon()
         {
             this.Lemon = true;
+            NotifyOfPropertyChange("Description");
         }
 
         /// <summary>

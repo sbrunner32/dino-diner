@@ -23,7 +23,7 @@
                 
             </StackPanel.Resources>
             <Label Foreground="Black" HorizontalAlignment="Center">Sides</Label>
-            <Button>
+            <Button Name="BtnAddFryceritops" Click="AddFryceritops">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-08.png"/>
                 </Button.Background>
@@ -33,17 +33,17 @@
                     </TextBlock>
                 </DockPanel>
             </Button>
-            <Button>
+            <Button Name="BtnAddTriceritots" Click="AddTriceritots">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-11.png"/>
                 </Button.Background>
                 <DockPanel Height="80">
                     <TextBlock DockPanel.Dock="Bottom">
-                    Tryceritots
+                    Triceritots
                     </TextBlock>
                 </DockPanel>
             </Button>
-            <Button>
+            <Button Name="BtnAddMezzorellaSticks" Click="AddMezzorellaSticks">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-10.png"/>
                 </Button.Background>
@@ -53,7 +53,7 @@
                     </TextBlock>
                 </DockPanel>
             </Button>
-            <Button>
+            <Button Name="BtnAddMeteorMacAndCheese" Click="AddMeteorMacAndCheese">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-09.png"/>
                 </Button.Background>
@@ -68,21 +68,21 @@
         <!-- This is the StackPanel which contains the Size buttons-->
         <StackPanel Orientation="Vertical" Width="200">
             <Label Foreground="Black" HorizontalAlignment="Center">Size</Label>
-            <RadioButton HorizontalAlignment="Center">
+            <RadioButton Name="BtnPickSmall" HorizontalAlignment="Center">
                 <DockPanel Height="90">
                     <TextBlock FontSize="40"  DockPanel.Dock="Bottom">
                         Small
                     </TextBlock>
                 </DockPanel>
             </RadioButton>
-            <RadioButton HorizontalAlignment="Center">
+            <RadioButton Name="BtnPickMedium" HorizontalAlignment="Center">
                 <DockPanel Height="90">
                     <TextBlock FontSize="40" DockPanel.Dock="Bottom">
                         Medium
                     </TextBlock>
                 </DockPanel>
             </RadioButton>
-            <RadioButton HorizontalAlignment="Center">
+            <RadioButton Name="BtnPickLarge" HorizontalAlignment="Center">
                 <DockPanel Height="90">
                     <TextBlock FontSize="40" DockPanel.Dock="Bottom">
                         Large

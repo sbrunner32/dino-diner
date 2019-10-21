@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// Abstract class to denote a drink item from the menu.
     /// </summary>
-    public abstract class Drink : INotifyPropertyChanged
+    public abstract class Drink : INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// The PropertyChanged Event handler; notifies
@@ -58,5 +58,18 @@ namespace DinoDiner.Menu.Drinks
         {
             this.Ice = false;
         }
+
+        /// <summary>
+        /// Gets the text description of the menu item
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        /// <summary>
+        /// Virtual property for all the special instructions. 
+        /// </summary>
+        public virtual string[] Special { get; }
     }
 }
