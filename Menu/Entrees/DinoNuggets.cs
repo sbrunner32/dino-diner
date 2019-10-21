@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees
 {
     /// <summary>
     /// Public class for the DinoNuggets entree.
     /// </summary>
-    public class DinoNuggets : Entree, IMenuItem, IOrderItem
+    public class DinoNuggets : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {        
         private int nuggetCount { get; set; }
 
         /// <summary>
         /// Gets any special preparation instructions
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {
@@ -58,6 +59,10 @@ namespace DinoDiner.Menu.Entrees
             this.Price += 0.25;
             this.Calories += 59;
             this.Ingredients.Add("Chicken Nugget");
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
+            NotifyOfPropertyChange("Calories");
+            NotifyOfPropertyChange("Price");
         }
 
         /// <summary>
@@ -69,14 +74,7 @@ namespace DinoDiner.Menu.Entrees
             return "Dino-Nuggets";
         }
 
-        /// <summary>
-        /// Text description of the food item
-        /// </summary>
-        /// <returns>The ToString implementation of this object</returns>
-        public string Description()
-        {
-            return this.ToString();
-        }
+       
 
     }
 }

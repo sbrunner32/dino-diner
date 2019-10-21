@@ -55,6 +55,9 @@ namespace DinoDiner.Menu.Sides
             get { return this.ToString(); }
         }
 
-        public string[] Special { get; }
+        /// <summary>
+        /// Array of all special instructions for the Side item
+        /// </summary>
+        public virtual string[] Special { get; }
     }
 }

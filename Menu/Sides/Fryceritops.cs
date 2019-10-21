@@ -1,14 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu.Sides
 {
     /// <summary>
     /// Public class for the side item Fryceritops which inherits from the Side base class
     /// </summary>
-    public class Fryceritops : Side, IMenuItem
-    {   
+    public class Fryceritops : Side, IMenuItem, IOrderItem, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
+        }
+
+
         /// <summary>
         /// Overrides the side class implementation of ingredients to display the side's ingredients
         /// </summary>
@@ -46,6 +60,9 @@ namespace DinoDiner.Menu.Sides
                         this.Price = 1.95;
                         break;
                     }
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Description");
             }
             get
             {
