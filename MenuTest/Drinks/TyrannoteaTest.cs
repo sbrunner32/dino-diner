@@ -212,6 +212,92 @@ namespace MenuTest.Drinks
             Assert.Equal<uint>(32, tea.Calories);
         }
 
+        [Fact]
+        public void ShouldHaveEmptySpecialListByDefualt()
+        {
+            Tyrannotea t = new Tyrannotea();
+            Assert.Empty(t.Special);
+        }
+        [Fact]
+        public void ChangingSizeShouldNotifyOfPricePropertyChange()
+        {
+            Tyrannotea t = new Tyrannotea();
+            Assert.PropertyChanged(t, "Price", () =>
+            {
+                t.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeShouldNotifyOfDescriptionPropertyChange()
+        {
+            Tyrannotea t = new Tyrannotea();
+            Assert.PropertyChanged(t, "Description", () =>
+            {
+                t.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void HoldIceShouldNotifyOfSpecialPropertyChange()
+        {
+            Tyrannotea t = new Tyrannotea();
+            Assert.PropertyChanged(t, "Special", () =>
+            {
+                t.HoldIce();
+            });
+        }
+
+        [Fact]
+        public void AddLemonShouldNotifyOfSpecialPropertyChange()
+        {
+            Tyrannotea t = new Tyrannotea();
+            Assert.PropertyChanged(t, "Special", () =>
+            {
+                t.AddLemon();
+            });
+        }
+
+        [Fact]
+        public void SpecialShouldHoldIce()
+        {
+            Tyrannotea t = new Tyrannotea();
+            t.HoldIce();
+            Assert.Collection<string>(t.Special,
+                item =>
+                {
+                    Assert.Equal("Hold Ice", item);
+                }
+            );
+        }
+
+        [Fact]
+        public void SpecialShouldAddLemon()
+        {
+            Tyrannotea t = new Tyrannotea();
+            t.AddLemon();
+            Assert.Collection<string>(t.Special,
+                item =>
+                {
+                    Assert.Equal("Add Lemon", item);
+                }
+            );
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectToString()
+        {
+            Tyrannotea t = new Tyrannotea();
+            Assert.Equal(($"{t.Size} Tyrannotea"), t.ToString());
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            Tyrannotea t = new Tyrannotea();
+            Assert.Equal(($"{t.Size} Tyrannotea"), t.Description);
+        }
+
 
     }
 }

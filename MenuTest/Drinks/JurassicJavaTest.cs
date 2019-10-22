@@ -133,5 +133,115 @@ namespace MenuTest.Drinks
             Assert.Contains<string>("Coffee", java.Ingredients);
             Assert.Equal<int>(2, java.Ingredients.Count);
         }
+
+        [Fact]
+        public void ShouldHaveEmptySpecialListByDefualt()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.Empty(jj.Special);
+        }
+
+        [Fact]
+        public void LeaveRoomForCreamShouldNotifyOfSpecialPropertyChange()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.PropertyChanged(jj, "Special", () =>
+            {
+                jj.LeaveRoomForCream();
+            });
+        }
+
+        [Fact]
+        public void AddIceShouldNotifyOfSpecialPropertyChange()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.PropertyChanged(jj, "Special", () =>
+            {
+                jj.AddIce();
+            });
+        }
+
+        [Fact]
+        public void ResizingShouldNotifyOfPricePropertyChange()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.PropertyChanged(jj, "Price", () =>
+            {
+                jj.Size=Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ResizingShouldNotifyOfDescriptionPropertyChange()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.PropertyChanged(jj, "Description", () =>
+            {
+                jj.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectToString()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.Equal(($"{jj.Size} Jurassic Java"), jj.ToString());
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.Equal(($"{jj.Size} Jurassic Java"), jj.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldAddIce()
+        {
+            JurassicJava jj = new JurassicJava();
+            jj.AddIce();
+            Assert.Collection<string>(jj.Special,
+                item =>
+                {
+                    Assert.Equal("Add Ice", item);
+                }
+            );
+        }
+
+
+        [Fact]
+        public void SpecialShouldLeaveRoomForCream()
+        {
+            JurassicJava jj = new JurassicJava();
+            jj.LeaveRoomForCream();
+            Assert.Collection<string>(jj.Special,
+                item =>
+                {
+                    Assert.Equal("Room For Cream", item);
+                }
+            );
+        }
+
+
+        [Fact]
+        public void SpecialShouldAddIceAndLeaveRoomForCream()
+        {
+            JurassicJava jj = new JurassicJava();
+            jj.AddIce();
+            jj.LeaveRoomForCream();
+            Assert.Collection<string>(jj.Special,
+                item =>
+                {
+                    Assert.Equal("Add Ice", item);
+                },
+                item =>
+                {
+                    Assert.Equal("Room For Cream", item);
+                }
+            );
+        }
+
+        
+
     }
 }

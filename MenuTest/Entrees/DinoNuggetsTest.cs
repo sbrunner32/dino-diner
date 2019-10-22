@@ -133,5 +133,12 @@ namespace MenuTest.Entrees
                 }
             );
         }
+
+        [Fact]
+        public void ShouldHaveEmptySpecialListByDefualt()
+        {
+            DinoNuggets dn = new DinoNuggets();
+            Assert.Empty(dn.Special);
+        }
     }
 }

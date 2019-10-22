@@ -50,12 +50,12 @@ namespace DinoDiner.Menu.Drinks
         {
             get
             {
-                List<string> special = new List<string>();
+                List<string> special = new List<string>();                
                 if (!Ice) special.Add("Hold Ice");
                 return special.ToArray();
             }
         }
-
+        
         /// <summary>
         /// Protected size quanity of this Sodasauras
         /// </summary>
@@ -85,7 +85,6 @@ namespace DinoDiner.Menu.Drinks
                         break;
                 }
                 NotifyOfPropertyChange("Price");
-                NotifyOfPropertyChange("Calories");
                 NotifyOfPropertyChange("Description");
             }
             get

@@ -170,5 +170,71 @@ namespace MenuTest.Drinks
             Assert.Equal<int>(3, soda.Ingredients.Count);
         }
 
+        [Fact]
+        public void ShouldHaveEmptySpecialListByDefualt()
+        {
+            Sodasaurus s = new Sodasaurus();
+            Assert.Empty(s.Special);
+        }
+        [Fact]
+        public void ChangingSizeShouldNotifyOfPricePropertyChange()
+        {
+            Sodasaurus s = new Sodasaurus();
+            Assert.PropertyChanged(s, "Price", () =>
+            {
+                s.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeShouldNotifyOfDescriptionPropertyChange()
+        {
+            Sodasaurus s = new Sodasaurus();
+            Assert.PropertyChanged(s, "Description", () =>
+            {
+                s.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void HoldIceShouldNotifyOfSpecialPropertyChange()
+        {
+            Sodasaurus s = new Sodasaurus();
+            Assert.PropertyChanged(s, "Special", () =>
+            {
+                s.HoldIce();
+            });
+        }
+
+
+        [Fact]
+        public void SpecialShouldAddIce()
+        {
+            Sodasaurus s = new Sodasaurus();
+            s.HoldIce();
+            Assert.Collection<string>(s.Special,
+                item =>
+                {
+                    Assert.Equal("Hold Ice", item);
+                }
+            );
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectToString()
+        {
+            Sodasaurus s = new Sodasaurus();
+            Assert.Equal(($"{s.Size} {s.Flavor} Sodasaurus"), s.ToString());
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            Sodasaurus s = new Sodasaurus();
+            Assert.Equal(($"{s.Size} {s.Flavor} Sodasaurus"), s.Description);
+        }
+
+
+
     }
 }

@@ -292,12 +292,13 @@ namespace MenuTest.Entrees
         }
 
         [Fact]
-        public void SpecialShouldHoldBunKetchupAndPickle()
+        public void SpecialShouldHoldBunPickleAndKetchup()
         {
             SteakosaurusBurger sb = new SteakosaurusBurger();
             sb.HoldBun();
-            sb.HoldKetchup();
             sb.HoldPickle();
+            sb.HoldKetchup();
+            
             Assert.Collection<string>(sb.Special,
                 item =>
                 {
@@ -305,11 +306,11 @@ namespace MenuTest.Entrees
                 },
                 item =>
                 {
-                    Assert.Equal("Hold Ketchup", item);
+                    Assert.Equal("Hold Pickle", item);
                 },
                 item =>
                 {
-                    Assert.Equal("Hold Pickle", item);
+                    Assert.Equal("Hold Ketchup", item);
                 }
             );
         }
@@ -340,6 +341,12 @@ namespace MenuTest.Entrees
                     Assert.Equal("Hold Mustard", item);
                 }
             );
+        }
+        [Fact]
+        public void ShouldHaveEmptySpecialListByDefualt()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            Assert.Empty(sb.Special);
         }
 
     }

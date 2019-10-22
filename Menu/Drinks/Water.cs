@@ -26,7 +26,7 @@ namespace DinoDiner.Menu.Drinks
             set
             {
                 lemon = value;
-                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Special");
             }
         }
 

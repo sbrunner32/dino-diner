@@ -18,8 +18,8 @@ namespace DinoDiner.Menu.Drinks
             get
             {
                 List<string> special = new List<string>();
-                if (RoomForCream) special.Add("Room for Cream");
                 if (Ice) special.Add("Add Ice");
+                if (RoomForCream) special.Add("Room For Cream");                
                 return special.ToArray();
             }
         }
@@ -72,7 +72,6 @@ namespace DinoDiner.Menu.Drinks
                         break;
                 }
                 NotifyOfPropertyChange("Price");
-                NotifyOfPropertyChange("Calories");
                 NotifyOfPropertyChange("Description");
             }
             get
@@ -97,6 +96,7 @@ namespace DinoDiner.Menu.Drinks
         public void AddIce()
         {
             this.Ice = true;
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>
@@ -105,6 +105,7 @@ namespace DinoDiner.Menu.Drinks
         public void LeaveRoomForCream()
         {
             this.RoomForCream = true;
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>

@@ -28,14 +28,14 @@ namespace DinoDiner.Menu.Entrees
             get
             {
                 List<string> special = new List<string>();
-                if (!bun) special.Add("Hold Whole Wheat Bun");
+                if (!bun) special.Add("Hold Bun");
                 if (!lettuce) special.Add("Hold Lettuce");
                 if (!tomato) special.Add("Hold Tomato");
                 if (!onion) special.Add("Hold Onion");
                 if (!pickle) special.Add("Hold Pickle");
                 if (!ketchup) special.Add("Hold Ketchup");
                 if (!mustard) special.Add("Hold Mustard");
-                if (!mayo) special.Add("Hold Mayonaise");
+                if (!mayo) special.Add("Hold Mayo");
                 return special.ToArray();
             }
         }

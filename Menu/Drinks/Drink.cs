@@ -57,7 +57,7 @@ namespace DinoDiner.Menu.Drinks
         public void HoldIce()
         {
             this.Ice = false;
-            NotifyOfPropertyChange("Description");
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>

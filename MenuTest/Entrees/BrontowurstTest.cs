@@ -198,6 +198,12 @@ namespace MenuTest.Entrees
             Assert.Equal("Brontowurst", b.Description);
         }
 
+        [Fact]
+        public void ShouldHaveEmptySpecialListByDefualt()
+        {
+            Brontowurst b = new Brontowurst();
+            Assert.Empty(b.Special);
+        }
     }
 
 }
