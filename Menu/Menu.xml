@@ -281,6 +281,11 @@
             Public getter and setter that stores whether or not the Tyrannotea is sweet, defaults to false
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Special">
+            <summary>
+            Gets any special instructions for this menu item
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Lemon">
             <summary>
             Public getter and setter that stores whether or not the Tyrannotea has lemon, defaults to false
@@ -322,14 +327,29 @@
             Class to represent Water which inherits from the Drink class
             </summary>
         </member>
+        <member name="F:DinoDiner.Menu.Drinks.Water.lemon">
+            <summary>
+            Private backing variable for Lemon property
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Drinks.Water.Lemon">
             <summary>
             Public getter and setter that stores whether or not the Tyrannotea has lemon, defaults to false
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Special">
+            <summary>
+            Gets any special instructions for this menu item
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Drinks.Water.Ingredients">
             <summary>
             Public override property to set/get the list of ingredients
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Water.size">
+            <summary>
+            Private backing variable for the Size property.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Drinks.Water.Size">

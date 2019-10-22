@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu.Drinks
 {
     /// <summary>
     /// Class for Tyrannotea that inherits from the Drink class
     /// </summary>
-    public class Tyrannotea : Drink, IMenuItem
+    public class Tyrannotea : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Protected property for whether or not the Tea is sweet. 
@@ -30,8 +31,24 @@ namespace DinoDiner.Menu.Drinks
                     this.Calories *= 2;
                 else
                     this.Calories /= 2;
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Description");
             }
-        } 
+        }
+
+        /// <summary>
+        /// Gets any special instructions for this menu item
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!Ice) special.Add("Hold Ice");
+                if(Lemon) special.Add("Add Lemon");
+                return special.ToArray();
+            }
+        }
 
         /// <summary>
         /// Public getter and setter that stores whether or not the Tyrannotea has lemon, defaults to false

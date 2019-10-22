@@ -30,6 +30,13 @@ namespace MenuTest.Entrees
             Assert.Contains<string>("Jelly", ingredients);
             Assert.Equal<int>(3, ingredients.Count);
         }
+        [Fact]
+        public void ShouldHaveCorrectToString()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            Assert.Equal("Prehistoric PB&J", pbj.ToString());
+        }
+
 
         [Fact]
         public void HoldPeanutButterShouldRemovePeanutButter()

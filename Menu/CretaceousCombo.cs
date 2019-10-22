@@ -4,13 +4,14 @@ using System.Text;
 using DinoDiner.Menu.Entrees;
 using DinoDiner.Menu.Drinks;
 using DinoDiner.Menu.Sides;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Public class for a CretaceousCombo
     /// </summary>
-    public class CretaceousCombo : IMenuItem
+    public class CretaceousCombo : IMenuItem, IOrderItem
     {
         /// <summary>
         /// The entree item of the combo
@@ -115,11 +116,11 @@ namespace DinoDiner.Menu
                 //Add special functionality to menu items to add commented code back
                 //Can replace .ToString() calls with Description once Description is implemented. 
                 List<string> special = new List<string>();
-                //special.AddRange(Entree.Special);
-                special.Add(Side.ToString());
-                //special.AddRange(Side.Special);
-                special.Add(Drink.ToString());
-                //special.AddRange(Drink.Special);
+                special.AddRange(Entree.Special);
+                special.Add(Side.Description);
+                special.AddRange(Side.Special);
+                special.Add(Drink.Description);
+                special.AddRange(Drink.Special);
                 return special.ToArray();
             }
         }

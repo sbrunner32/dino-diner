@@ -24,7 +24,7 @@ namespace DinoDiner.Menu.Entrees
                 List<string> special = new List<string>();
                 if (!bun) special.Add("Hold Bun");
                 if (!pepper) special.Add("Hold Peppers");
-                if (!onion) special.Add("Hold Onions");
+                if (!onion) special.Add("Hold Onion");
                 return special.ToArray();
             }
         }

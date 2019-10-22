@@ -25,7 +25,8 @@ namespace DinoDiner.Menu.Drinks
             }
             set
             {
-                flavor = value;
+                flavor = value;                
+                NotifyOfPropertyChange("Description");
             }
 
         }
