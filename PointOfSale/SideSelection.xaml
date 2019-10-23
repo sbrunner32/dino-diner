@@ -68,21 +68,21 @@
         <!-- This is the StackPanel which contains the Size buttons-->
         <StackPanel Orientation="Vertical" Width="200">
             <Label Foreground="Black" HorizontalAlignment="Center">Size</Label>
-            <RadioButton Name="BtnPickSmall" HorizontalAlignment="Center">
+            <RadioButton Click="OnMakeSmall" Name="BtnPickSmall" HorizontalAlignment="Center">
                 <DockPanel Height="90">
                     <TextBlock FontSize="40"  DockPanel.Dock="Bottom">
                         Small
                     </TextBlock>
                 </DockPanel>
             </RadioButton>
-            <RadioButton Name="BtnPickMedium" HorizontalAlignment="Center">
+            <RadioButton Click="OnMakeMedium" Name="BtnPickMedium" HorizontalAlignment="Center">
                 <DockPanel Height="90">
                     <TextBlock FontSize="40" DockPanel.Dock="Bottom">
                         Medium
                     </TextBlock>
                 </DockPanel>
             </RadioButton>
-            <RadioButton Name="BtnPickLarge" HorizontalAlignment="Center">
+            <RadioButton Click ="OnMakeLarge" Name="BtnPickLarge" HorizontalAlignment="Center">
                 <DockPanel Height="90">
                     <TextBlock FontSize="40" DockPanel.Dock="Bottom">
                         Large
@@ -91,5 +91,12 @@
             </RadioButton>
         </StackPanel>
         <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Add To Order</Label>
+        <ContentControl Content="{Binding Path=Items}">
+            <ContentControl.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}"/>
+                </DataTemplate>
+            </ContentControl.ContentTemplate>
+        </ContentControl>
     </StackPanel>
 </Page>

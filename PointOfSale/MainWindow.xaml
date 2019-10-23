@@ -11,11 +11,12 @@
         <menu:Order/>
     </Window.DataContext>
     <DockPanel>
-        <local:OrderControl x:Name="OrderList"  
+        <local:OrderControl x:Name="OrderControl"  
                             DockPanel.Dock="Right" 
                             Width="200"                             
                             Background="LightSteelBlue"/>
-        <Frame Name="OrderInterface" 
+        <Frame Name="OrderUI" 
+               LoadCompleted="OnLoadCompleted"
                Source="MenuCategorySelection.xaml" 
                DataContextChanged="OnDataContextChanged"/>
     </DockPanel>
