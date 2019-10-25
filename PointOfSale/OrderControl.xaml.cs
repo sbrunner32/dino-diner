@@ -38,12 +38,12 @@ namespace PointOfSale
 
                 NavigationService?.Navigate(new SideSelection());
             }
-            /*if (OrderItems.SelectedItem is Entree entree)
+            if (OrderItems.SelectedItem is Entree entree)
             {
 
                 NavigationService?.Navigate(new EntreeSelection());
             }
-            if (OrderItems.SelectedItem is Drink drink)
+            /*if (OrderItems.SelectedItem is Drink drink)
             {
 
                 NavigationService?.Navigate(new DrinkSelection());
