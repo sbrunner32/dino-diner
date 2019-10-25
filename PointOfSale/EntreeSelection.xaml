@@ -27,7 +27,7 @@
                 </Style>
             </WrapPanel.Resources>
             <!--Brontowurst Button-->
-            <Button>
+            <Button Name ="BtnAddBrontowurst" Click="AddBrontowurst">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-01.png"/>
                 </Button.Background>
@@ -38,7 +38,7 @@
                 </DockPanel>
             </Button>
             <!--Dino-nuggetsButton-->
-            <Button>
+            <Button Name="BtnAddDinoNuggets" Click="AddDinoNuggets">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-02.png"/>
                 </Button.Background>
@@ -49,7 +49,7 @@
                 </DockPanel>
             </Button>
             <!--Steakosaurus Burger Button-->
-            <Button>
+            <Button Name="BtnAddSteakosaurusBurger" Click="AddSteakosaurusBurger">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-05.png"/>
                 </Button.Background>
@@ -60,7 +60,7 @@
                 </DockPanel>
             </Button>
             <!--T-Rex King Burger Button-->
-            <Button>
+            <Button Name="BtnAddTRexKingBurger" Click="AddTRexKingBurger">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-06.png"/>
                 </Button.Background>
@@ -71,7 +71,7 @@
                 </DockPanel>
             </Button>
             <!--Pterodactyl Button-->
-            <Button>
+            <Button Name="BtnAddPterodactylWings" Click="AddPterodactylWings">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-04.png"/>
                 </Button.Background>
@@ -82,7 +82,7 @@
                 </DockPanel>
             </Button>
             <!--Prehistoric PB&J Button-->
-            <Button>
+            <Button Name="BtnAddPrehistoricPBJ" Click="AddPrehistoricPBJ">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-03.png"/>
                 </Button.Background>
@@ -93,7 +93,7 @@
                 </DockPanel>
             </Button>
             <!--Veloci-Wrap Button-->
-            <Button>
+            <Button Name="BtnAddVelociwrap" Click="AddVelociwrap">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-07.png"/>
                 </Button.Background>

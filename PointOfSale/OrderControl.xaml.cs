@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using DinoDiner.Menu.Sides;
 using DinoDiner.Menu.Entrees;
 using DinoDiner.Menu.Drinks;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -36,6 +37,41 @@ namespace PointOfSale
             {
 
                 NavigationService?.Navigate(new SideSelection());
+            }
+            /*if (OrderItems.SelectedItem is Entree entree)
+            {
+
+                NavigationService?.Navigate(new EntreeSelection());
+            }
+            if (OrderItems.SelectedItem is Drink drink)
+            {
+
+                NavigationService?.Navigate(new DrinkSelection());
+            }*/
+        }
+
+        /*public void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs args)
+        {
+            MountItemListener();
+        }
+
+        private void MountItemListener()
+        {
+            if(DataContext is Order order)
+            {
+                order.Items.CollectionChanged += OnCollectionChanged;
+            }
+        }*/
+
+
+
+        private void OnRemoveItem(object sender, RoutedEventArgs args)
+        {
+            if(DataContext is Order order)
+            {
+                if(sender is FrameworkElement element)
+                    if(element.DataContext is IOrderItem item)
+                        order.Items.Remove(item);
             }
         }
 

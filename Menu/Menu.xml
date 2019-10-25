@@ -792,6 +792,11 @@
             An order of various food and drink items
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Order.PropertyChanged">
+            <summary>
+            Event Handler for property changes.
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Order.Items">
             <summary>
             The items that make up this order.
@@ -800,6 +805,11 @@
         <member name="P:DinoDiner.Menu.Order.SubtotalCost">
             <summary>
             Subtotal of the order's cost before Tax
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Order.salesTaxRate">
+            <summary>
+            Private backing variable to store SalesTaxRate, defaulted to 0.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Order.SalesTaxRate">
@@ -815,6 +825,11 @@
         <member name="P:DinoDiner.Menu.Order.TotalCost">
             <summary>
             Gets the total cost of this order
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.#ctor">
+            <summary>
+            Public constructor for creating the order.
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Sides.Fryceritops">

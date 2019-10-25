@@ -14,12 +14,30 @@
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <TextBox Text="Order" Grid.Row = "0" />
-        <ListBox Name="OrderItems" Grid.Row="1" ItemsSource="{Binding Path=Items, UpdateSourceTrigger=PropertyChanged}">
+        <ListBox Name="OrderItems" 
+                 Grid.Row="1" 
+                 ItemsSource="{Binding Path=Items, UpdateSourceTrigger=PropertyChanged}"                 
+                 SelectionChanged="OnSelectionChanged">
+            <!--IsSynchronizedWithCurrentItem="True" -->
+                 <!-- DataContextChanged="OnDataContextChanged"-->
+                 
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
+                    <StackPanel Width="190">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="15"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
                         <TextBlock Text="{Binding Path=Description}"/>
-                        <ListBox ItemsSource="{Binding Path=Special}"/>
+                        <Button Click="OnRemoveItem"
+                                Background="Red"
+                                Foreground="White"
+                                Grid.Column="1">
+                            X
+                        </Button>
+                        <ListBox ItemsSource="{Binding Path=Special}" BorderBrush="White"/>
                     </StackPanel>
                 </DataTemplate>                
             </ListBox.ItemTemplate>
