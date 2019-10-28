@@ -13,96 +13,106 @@
     <StackPanel>
         <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Add To Order</Label>
         <!--WrapPanel that makes up the group of buttons to select an entree for order-->
-        <WrapPanel>
-            <WrapPanel.Resources>
-                <!--Style proprerty that sets button properties: Minimum height, minimum width, and Border thickness-->
-                <Style TargetType="Button">
-                    <Setter Property="MinWidth" Value="140"/>
-                    <Setter Property="MinHeight" Value="140"/>
-                    <Setter Property="BorderThickness" Value="2"/>
-                </Style>
-                <!--Style property to make the text for all buttons Bold-->
-                <Style TargetType="TextBlock">
-                    <Setter Property="FontWeight" Value="700"/>
-                </Style>
-            </WrapPanel.Resources>
-            <!--Brontowurst Button-->
-            <Button Name ="BtnAddBrontowurst" Click="AddBrontowurst">
-                <Button.Background>
-                    <ImageBrush ImageSource="Assets/DinoDiner-01.png"/>
-                </Button.Background>
-                <DockPanel Height="150">
-                    <TextBlock DockPanel.Dock="Bottom">
+        <StackPanel Orientation="Horizontal">
+            <WrapPanel Width="600">
+                <WrapPanel.Resources>
+                    <!--Style proprerty that sets button properties: Minimum height, minimum width, and Border thickness-->
+                    <Style TargetType="Button">
+                        <Setter Property="MinWidth" Value="140"/>
+                        <Setter Property="MinHeight" Value="140"/>
+                        <Setter Property="BorderThickness" Value="2"/>
+                    </Style>
+                    <!--Style property to make the text for all buttons Bold-->
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontWeight" Value="700"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <!--Brontowurst Button-->
+                <Button Name ="BtnAddBrontowurst" Click="AddBrontowurst">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/DinoDiner-01.png"/>
+                    </Button.Background>
+                    <DockPanel Height="150">
+                        <TextBlock DockPanel.Dock="Bottom">
                     Brontowurst
-                    </TextBlock>
-                </DockPanel>
-            </Button>
-            <!--Dino-nuggetsButton-->
-            <Button Name="BtnAddDinoNuggets" Click="AddDinoNuggets">
-                <Button.Background>
-                    <ImageBrush ImageSource="Assets/DinoDiner-02.png"/>
-                </Button.Background>
-                <DockPanel Height="150">
-                    <TextBlock DockPanel.Dock="Bottom">
+                        </TextBlock>
+                    </DockPanel>
+                </Button>
+                <!--Dino-nuggetsButton-->
+                <Button Name="BtnAddDinoNuggets" Click="AddDinoNuggets">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/DinoDiner-02.png"/>
+                    </Button.Background>
+                    <DockPanel Height="150">
+                        <TextBlock DockPanel.Dock="Bottom">
                     Dino-Nuggets
-                    </TextBlock>
-                </DockPanel>
-            </Button>
-            <!--Steakosaurus Burger Button-->
-            <Button Name="BtnAddSteakosaurusBurger" Click="AddSteakosaurusBurger">
-                <Button.Background>
-                    <ImageBrush ImageSource="Assets/DinoDiner-05.png"/>
-                </Button.Background>
-                <DockPanel Height="150">
-                    <TextBlock DockPanel.Dock="Bottom">
+                        </TextBlock>
+                    </DockPanel>
+                </Button>
+                <!--Steakosaurus Burger Button-->
+                <Button Name="BtnAddSteakosaurusBurger" Click="AddSteakosaurusBurger">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/DinoDiner-05.png"/>
+                    </Button.Background>
+                    <DockPanel Height="150">
+                        <TextBlock DockPanel.Dock="Bottom">
                     Steakosaurus Burger
-                    </TextBlock>
-                </DockPanel>
-            </Button>
-            <!--T-Rex King Burger Button-->
-            <Button Name="BtnAddTRexKingBurger" Click="AddTRexKingBurger">
-                <Button.Background>
-                    <ImageBrush ImageSource="Assets/DinoDiner-06.png"/>
-                </Button.Background>
-                <DockPanel Height="150">
-                    <TextBlock DockPanel.Dock="Bottom">
+                        </TextBlock>
+                    </DockPanel>
+                </Button>
+                <!--T-Rex King Burger Button-->
+                <Button Name="BtnAddTRexKingBurger" Click="AddTRexKingBurger">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/DinoDiner-06.png"/>
+                    </Button.Background>
+                    <DockPanel Height="150">
+                        <TextBlock DockPanel.Dock="Bottom">
                     T-Rex King Burger
-                    </TextBlock>
-                </DockPanel>
-            </Button>
-            <!--Pterodactyl Button-->
-            <Button Name="BtnAddPterodactylWings" Click="AddPterodactylWings">
-                <Button.Background>
-                    <ImageBrush ImageSource="Assets/DinoDiner-04.png"/>
-                </Button.Background>
-                <DockPanel Height="150">
-                    <TextBlock DockPanel.Dock="Bottom">
+                        </TextBlock>
+                    </DockPanel>
+                </Button>
+                <!--Pterodactyl Button-->
+                <Button Name="BtnAddPterodactylWings" Click="AddPterodactylWings">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/DinoDiner-04.png"/>
+                    </Button.Background>
+                    <DockPanel Height="150">
+                        <TextBlock DockPanel.Dock="Bottom">
                      Pterodactyl Wings
-                    </TextBlock>
-                </DockPanel>
-            </Button>
-            <!--Prehistoric PB&J Button-->
-            <Button Name="BtnAddPrehistoricPBJ" Click="AddPrehistoricPBJ">
-                <Button.Background>
-                    <ImageBrush ImageSource="Assets/DinoDiner-03.png"/>
-                </Button.Background>
-                <DockPanel Height="150">
-                    <TextBlock DockPanel.Dock="Bottom">
+                        </TextBlock>
+                    </DockPanel>
+                </Button>
+                <!--Prehistoric PB&J Button-->
+                <Button Name="BtnAddPrehistoricPBJ" Click="AddPrehistoricPBJ">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/DinoDiner-03.png"/>
+                    </Button.Background>
+                    <DockPanel Height="150">
+                        <TextBlock DockPanel.Dock="Bottom">
                     Prehistoric PB&amp;J
-                    </TextBlock>
-                </DockPanel>
-            </Button>
-            <!--Veloci-Wrap Button-->
-            <Button Name="BtnAddVelociwrap" Click="AddVelociwrap">
-                <Button.Background>
-                    <ImageBrush ImageSource="Assets/DinoDiner-07.png"/>
-                </Button.Background>
-                <DockPanel Height="150">
-                    <TextBlock DockPanel.Dock="Bottom">
+                        </TextBlock>
+                    </DockPanel>
+                </Button>
+                <!--Veloci-Wrap Button-->
+                <Button Name="BtnAddVelociwrap" Click="AddVelociwrap">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/DinoDiner-07.png"/>
+                    </Button.Background>
+                    <DockPanel Height="150">
+                        <TextBlock DockPanel.Dock="Bottom">
                     Veloci-Wrap
-                    </TextBlock>
-                </DockPanel>
-            </Button>
-        </WrapPanel>
+                        </TextBlock>
+                    </DockPanel>
+                </Button>
+            </WrapPanel>
+            <ContentControl Content="{Binding Path=Items}">
+                <ContentControl.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"/>
+                    </DataTemplate>
+                </ContentControl.ContentTemplate>
+            </ContentControl>
+        </StackPanel>
+        
     </StackPanel>
 </Page>

@@ -39,7 +39,7 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.Add(entree);
+                order.Add(entree);
                 this.Entree = entree;
             }
         }
@@ -79,5 +79,15 @@ namespace PointOfSale
             SelectEntree(new VelociWrap());
         }
 
+
+        void onAddPrehistoricPBJ(object sender, RoutedEventArgs args)
+        {
+            if(DataContext is Order order)
+            {
+                PrehistoricPBJ pbj = new PrehistoricPBJ();
+                order.Add(pbj);
+                NavigationService.Navigate(new CustomizePrehistoricPBJ(pbj));
+            }
+        }
     }
 }

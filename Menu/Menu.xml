@@ -9,6 +9,11 @@
             Public class for a CretaceousCombo
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.CretaceousCombo.PropertyChanged">
+            <summary>
+            Event Handler for property changes, notifies when a combo property changes
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.CretaceousCombo.Entree">
             <summary>
             The entree item of the combo
@@ -794,7 +799,7 @@
         </member>
         <member name="E:DinoDiner.Menu.Order.PropertyChanged">
             <summary>
-            Event Handler for property changes.
+            Event Handler for property changes, notifies when an order property changes
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Order.Items">
@@ -830,6 +835,24 @@
         <member name="M:DinoDiner.Menu.Order.#ctor">
             <summary>
             Public constructor for creating the order.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.Add(DinoDiner.Menu.IOrderItem)">
+            <summary>
+            Adds an item to the items list of this order
+            </summary>
+            <param name="item">IOrderItem to be added to the order</param>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.Remove(DinoDiner.Menu.IOrderItem)">
+            <summary>
+            Removes IOrderItem item from the list of items in the order.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.NotifyAllPropertiesChanged">
+            <summary>
+            Helper method to notify all properties have changed.
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Sides.Fryceritops">

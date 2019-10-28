@@ -11,8 +11,13 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Public class for a CretaceousCombo
     /// </summary>
-    public class CretaceousCombo : IMenuItem, IOrderItem
+    public class CretaceousCombo : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Event Handler for property changes, notifies when a combo property changes
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// The entree item of the combo
         /// </summary>

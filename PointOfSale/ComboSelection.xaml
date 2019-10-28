@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ComboSelection" Height="450" >
 <!--WrapPanel that makes up the group of buttons to select a combo for order-->
-    <WrapPanel>
+    <WrapPanel Width="600">
         <WrapPanel.Resources>
             <!--Style proprerty that sets button properties: Minimum height, minimum width, and Border thickness-->
             <Style TargetType="Button">
@@ -22,7 +22,7 @@
             </Style>
         </WrapPanel.Resources>
         <!--Brontowurst Combo Button-->
-        <Button Click="CustomizeCombo">
+        <Button Name="BtnBrontowurstCombo" Click="CustomizeCombo">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-01.png"/>
             </Button.Background>
@@ -33,7 +33,7 @@
             </DockPanel>
         </Button>
         <!--Dino-nuggets Combo Button-->
-        <Button Click="CustomizeCombo">
+        <Button Name="BtnDinoNuggetsCombo"  Click="CustomizeCombo">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-02.png"/>
             </Button.Background>
@@ -44,7 +44,7 @@
             </DockPanel>            
         </Button>
         <!--Steakosaurus Burger Combo Button-->
-        <Button Click="CustomizeCombo">
+        <Button Name="BtnSteakosaurusBurgerCombo"  Click="CustomizeCombo">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-05.png"/>
             </Button.Background>
@@ -55,7 +55,7 @@
             </DockPanel>            
         </Button>
         <!--T-Rex King Burger Combo Button-->
-        <Button Click="CustomizeCombo">
+        <Button Name="BtnTRexKingBurgerCombo" Click="CustomizeCombo">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-06.png"/>
             </Button.Background>

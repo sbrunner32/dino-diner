@@ -29,8 +29,8 @@ namespace PointOfSale
             InitializeComponent();
             OrderControl.NavigationService = OrderUI.NavigationService;
             Order order = (Order)DataContext;
-            order.Items.Add(new Fryceritops());
-            order.Items.Add(new Tyrannotea());
+            order.Add(new Fryceritops());
+            order.Add(new Tyrannotea());
             
             
             /*
@@ -56,7 +56,15 @@ namespace PointOfSale
             if (content == null) return;
             content.DataContext = OrderUI.DataContext;
         }
-       
+
+
+        private void OnDone(object sender, RoutedEventArgs args)
+        {
+            if (OrderUI.NavigationService.CanGoBack)
+                OrderUI.GoBack();
+            else
+                OrderUI.NavigationService.Navigate(new MenuCategorySelection());
+        }
 
         private void BindDataContextToPage()
         {

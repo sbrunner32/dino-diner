@@ -50,19 +50,6 @@ namespace PointOfSale
             }*/
         }
 
-        /*public void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs args)
-        {
-            MountItemListener();
-        }
-
-        private void MountItemListener()
-        {
-            if(DataContext is Order order)
-            {
-                order.Items.CollectionChanged += OnCollectionChanged;
-            }
-        }*/
-
 
 
         private void OnRemoveItem(object sender, RoutedEventArgs args)
@@ -71,7 +58,7 @@ namespace PointOfSale
             {
                 if(sender is FrameworkElement element)
                     if(element.DataContext is IOrderItem item)
-                        order.Items.Remove(item);
+                        order.Remove(item);
             }
         }
 
