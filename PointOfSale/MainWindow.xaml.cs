@@ -29,8 +29,11 @@ namespace PointOfSale
             InitializeComponent();
             OrderControl.NavigationService = OrderUI.NavigationService;
             Order order = (Order)DataContext;
-            order.Add(new Fryceritops());
-            order.Add(new Tyrannotea());
+
+
+
+            /*order.Add(new Fryceritops());
+            order.Add(new Tyrannotea());/
             
             
             /*

@@ -28,17 +28,17 @@
             </StackPanel.Resources>
 
             <StackPanel>
-                <Button>Chery</Button>
-                <Button >Chocolate</Button>
-                <Button >Cola</Button>
+                <Button Click="SelectCherry">Chery</Button>
+                <Button Click="SelectChocolate">Chocolate</Button>
+                <Button Click="SelectCola">Cola</Button>
             </StackPanel>
             <StackPanel>
-                <Button >Lime</Button>
-                <Button >Orange</Button>
-                <Button >Root Beer</Button>
+                <Button Click="SelectLime">Lime</Button>
+                <Button Click="SelectOrange">Orange</Button>
+                <Button Click="SelectRootBeer">Root Beer</Button>
             </StackPanel>
             <StackPanel>
-                <Button >Vanilla</Button>
+                <Button Click="SelectVanilla">Vanilla</Button>
             </StackPanel>
             
         </StackPanel>

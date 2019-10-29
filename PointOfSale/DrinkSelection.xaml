@@ -66,21 +66,21 @@
             <!-- This StackPanel contains all the Size options for the drinks.-->
             <StackPanel>
                 <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Size</Label>
-                <RadioButton HorizontalAlignment="Center">
+                <RadioButton Click="OnMakeSmall" Name="BtnPickSmall" HorizontalAlignment="Center">
                     <DockPanel Height="60">
                         <TextBlock FontSize="20"  DockPanel.Dock="Bottom">
                         Small
                         </TextBlock>
                     </DockPanel>
                 </RadioButton>
-                <RadioButton HorizontalAlignment="Center">
+                <RadioButton Click="OnMakeMedium" Name="BtnPickMedium" HorizontalAlignment="Center">
                     <DockPanel Height="60">
                         <TextBlock FontSize="24" DockPanel.Dock="Bottom">
                         Medium
                         </TextBlock>
                     </DockPanel>
                 </RadioButton>
-                <RadioButton HorizontalAlignment="Center">
+                <RadioButton Click ="OnMakeLarge" Name="BtnPickLarge" HorizontalAlignment="Center">
                     <DockPanel Height="60">
                         <TextBlock FontSize="28" DockPanel.Dock="Bottom">
                         Large
@@ -90,7 +90,7 @@
             </StackPanel>
 
             <!-- This StackPanel contains all the special options for the drinks.-->
-            <StackPanel>
+            <StackPanel Width="200">
                 <Label FontSize="16" Foreground="Black" HorizontalAlignment="Center">Special</Label>
                 <Button Name="btnSelectFlavor" Click="SelectFlavor" Height="70" Visibility="Collapsed">
                     Flavor
@@ -111,6 +111,16 @@
                     Decaf
                 </Button>
             </StackPanel>
+            <Button Height="50" Name="btnDone" Click="OnDone">
+                Done
+            </Button>
+            <ContentControl Content="{Binding Path=Items}">
+                <ContentControl.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"/>
+                    </DataTemplate>
+                </ContentControl.ContentTemplate>
+            </ContentControl>
         </StackPanel>
     </StackPanel>
 </Page> 

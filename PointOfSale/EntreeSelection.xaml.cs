@@ -41,6 +41,7 @@ namespace PointOfSale
             {
                 order.Add(entree);
                 this.Entree = entree;
+                NavigationService.Navigate(new MenuCategorySelection());
             }
         }
 
@@ -69,10 +70,10 @@ namespace PointOfSale
             SelectEntree(new PterodactylWings());
         }
 
-        public void AddPrehistoricPBJ(object sender, RoutedEventArgs args)
+        /*public void AddPrehistoricPBJ(object sender, RoutedEventArgs args)
         {
             SelectEntree(new PrehistoricPBJ());
-        }
+        }*/
 
         public void AddVelociwrap(object sender, RoutedEventArgs args)
         {
@@ -80,12 +81,14 @@ namespace PointOfSale
         }
 
 
-        void onAddPrehistoricPBJ(object sender, RoutedEventArgs args)
+        void AddPrehistoricPBJ(object sender, RoutedEventArgs args)
         {
             if(DataContext is Order order)
             {
                 PrehistoricPBJ pbj = new PrehistoricPBJ();
                 order.Add(pbj);
+                Entree = pbj;
+               
                 NavigationService.Navigate(new CustomizePrehistoricPBJ(pbj));
             }
         }
