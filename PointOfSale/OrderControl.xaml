@@ -18,10 +18,8 @@
                  Grid.Row="1" 
                  ItemsSource="{Binding Path=Items, UpdateSourceTrigger=PropertyChanged}"                 
                  SelectionChanged="OnSelectionChanged"
-                 IsSynchronizedWithCurrentItem="True">
-            <!-- -->
-                 <!-- DataContextChanged="OnDataContextChanged"-->
-                 
+                 IsSynchronizedWithCurrentItem="False">
+            
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Width="190">
@@ -30,14 +28,14 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition Width="15"/>
                             </Grid.ColumnDefinitions>
-                        </Grid>
-                        <TextBlock Text="{Binding Path=Description}"/>
-                        <Button Click="OnRemoveItem"
+                            <TextBlock Text="{Binding Path=Description}"/>
+                            <Button Click="OnRemoveItem"
                                 Background="Red"
                                 Foreground="White"
                                 Grid.Column="1">
-                            X
-                        </Button>
+                                X
+                            </Button>
+                        </Grid>                        
                         <ListBox ItemsSource="{Binding Path=Special}" BorderBrush="White"/>
                     </StackPanel>
                 </DataTemplate>                

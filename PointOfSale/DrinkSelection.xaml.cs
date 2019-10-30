@@ -41,6 +41,13 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+
+        public DrinkSelection(Drink drink)
+        {
+            this.drink = drink;
+            InitializeComponent();
+            
+        }
         private void SelectFlavor(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new FlavorSelection((Sodasaurus)Drink));

@@ -28,18 +28,18 @@ namespace PointOfSale
             InitializeComponent();
         }
 
-        /*public SideSelection(Side side)
+        public SideSelection(Side side)
         {
             InitializeComponent();
             Side = side;
-        }*/
+        }
 
-        private void SelectSide(Side side)
+        private void SelectSide(Side sideSelect)
         {
             if (DataContext is Order order)
             {
-                order.Add(side);
-                Side = side;
+                order.Add(sideSelect);
+                Side = sideSelect;
             }
         }
 

@@ -36,18 +36,18 @@ namespace PointOfSale
             if(OrderItems.SelectedItem is Side side)
             {
 
-                NavigationService?.Navigate(new SideSelection());
+                NavigationService?.Navigate(new SideSelection(side));
             }
             if (OrderItems.SelectedItem is Entree entree)
             {
 
                 NavigationService?.Navigate(new EntreeSelection());
             }
-            /*if (OrderItems.SelectedItem is Drink drink)
+            if (OrderItems.SelectedItem is Drink drink)
             {
 
-                NavigationService?.Navigate(new DrinkSelection());
-            }*/
+                NavigationService?.Navigate(new DrinkSelection(drink));
+            }
         }
 
 
