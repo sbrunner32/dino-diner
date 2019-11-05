@@ -450,6 +450,11 @@
             </summary>
             <returns>The string value of the item name</returns>
         </member>
+        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.ResetNuggetCount">
+            <summary>
+            Resets the nugget count to 6
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.Entree">
             <summary>
             Class representing a side item from the menu

@@ -74,6 +74,24 @@ namespace DinoDiner.Menu.Entrees
             return "Dino-Nuggets";
         }
 
+        /// <summary>
+        /// Resets the nugget count to 6
+        /// </summary>
+        public void ResetNuggetCount()
+        {
+            int temp = this.nuggetCount;
+            if(temp != 6)
+            {
+                this.nuggetCount = 6;
+                NotifyOfPropertyChange("Ingredients");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Price");
+            }
+            
+            
+            
+        }
+
        
 
     }

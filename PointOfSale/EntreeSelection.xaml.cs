@@ -45,43 +45,15 @@ namespace PointOfSale
             }
         }
 
-        public void AddBrontowurst(object sender, RoutedEventArgs args)
-        {
-            SelectEntree(new Brontowurst());
-        }
-
-        public void AddDinoNuggets(object sender, RoutedEventArgs args)
-        {
-            SelectEntree(new DinoNuggets());
-        }
-
-        public void AddSteakosaurusBurger(object sender, RoutedEventArgs args)
-        {
-            SelectEntree(new SteakosaurusBurger());
-        }
-
-        public void AddTRexKingBurger(object sender, RoutedEventArgs args)
-        {
-            SelectEntree(new TRexKingBurger());
-        }
 
         public void AddPterodactylWings(object sender, RoutedEventArgs args)
         {
             SelectEntree(new PterodactylWings());
         }
 
-        /*public void AddPrehistoricPBJ(object sender, RoutedEventArgs args)
-        {
-            SelectEntree(new PrehistoricPBJ());
-        }*/
+        
 
-        public void AddVelociwrap(object sender, RoutedEventArgs args)
-        {
-            SelectEntree(new VelociWrap());
-        }
-
-
-        void AddPrehistoricPBJ(object sender, RoutedEventArgs args)
+        public void AddPrehistoricPBJ(object sender, RoutedEventArgs args)
         {
             if(DataContext is Order order)
             {
@@ -90,6 +62,66 @@ namespace PointOfSale
                 Entree = pbj;
                
                 NavigationService.Navigate(new CustomizePrehistoricPBJ(pbj));
+            }
+        }
+
+        public void AddVelociwrap(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                VelociWrap vw = new VelociWrap();
+                order.Add(vw);
+                Entree = vw;
+
+                NavigationService.Navigate(new CustomizeVelociwrap(vw));
+            }
+        }
+
+        public void AddDinoNuggets(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                DinoNuggets dn = new DinoNuggets();
+                order.Add(dn);
+                Entree = dn;
+
+                NavigationService.Navigate(new CustomizeDinoNuggets(dn));
+            }
+        }
+
+        public void AddBrontowurst(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                Brontowurst bw = new Brontowurst();
+                order.Add(bw);
+                Entree = bw;
+
+                NavigationService.Navigate(new CustomizeBrontowurst(bw));
+            }
+        }
+
+        public void AddSteakosaurusBurger(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                SteakosaurusBurger sb = new SteakosaurusBurger();
+                order.Add(sb);
+                Entree = sb;
+
+                NavigationService.Navigate(new CustomizeSteakosaurusBurger(sb));
+            }
+        }
+
+        public void AddTRexKingBurger(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                TRexKingBurger tb = new TRexKingBurger();
+                order.Add(tb);
+                Entree = tb;
+
+                NavigationService.Navigate(new CustomizeTRexKingBurger(tb));
             }
         }
     }
