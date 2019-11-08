@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Flavor Selection Page
+ * Author: Sam Brunner
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

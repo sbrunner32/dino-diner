@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Drink Selection Page
+ * Author: Sam Brunner
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +28,7 @@ namespace PointOfSale
     {
 
         private Drink drink;
-
+        private CretaceousCombo combo;
         public Drink Drink
         {
             get
@@ -44,10 +48,47 @@ namespace PointOfSale
 
         public DrinkSelection(Drink drink)
         {
-            this.drink = drink;
-            InitializeComponent();
-            
+            if (DataContext is Order order)
+            {
+                if (combo != null)
+                {
+                    this.combo.Drink = drink;
+                    this.Drink = drink;
+                }
+                else
+                {
+                    Drink = drink;
+                    order.Add(drink);                    
+                }
+            }
+
         }
+
+        public DrinkSelection(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.drink = combo.Drink;
+            this.combo = combo;
+            if (Drink is Sodasaurus soda)
+            {
+                SodasaurusButtons();
+            }
+            if (Drink is Tyrannotea tea)
+            {
+                TyrannoteaButtons();
+            }
+            if (Drink is JurassicJava java)
+            {
+                JurassicJavaButtons();
+            }
+            if (Drink is Water water)
+            {
+                WaterButtons();
+            }
+
+
+        }
+
         private void SelectFlavor(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new FlavorSelection((Sodasaurus)Drink));
@@ -55,61 +96,58 @@ namespace PointOfSale
 
         private void SelectDrink(Drink drink)
         {
-            if(DataContext is Order order)
+            if (DataContext is Order order)
             {
-                order.Add(drink);
-                Drink = drink;
+                if (combo != null)
+                {
+                    this.combo.Drink = drink;
+                    this.Drink = drink;
+                }
+                else
+                {
+                    order.Add(drink);
+                    Drink = drink;
+                }
             }
         }
 
         private void SelectSize(DinoDiner.Menu.Size size)
         {
             if (Drink != null)
-                Drink.Size = size;
+            {
+                if (combo != null)
+                {
+                    this.combo.Drink.Size = size;
+                }
+                else
+                {
+                    Drink.Size = size;
+                }
+            }
         }
 
 
         private void SelectSodasaurus(object sender, RoutedEventArgs args)
         {
-            btnSelectFlavor.Visibility = Visibility.Visible;
-            btnHoldIce.Visibility = Visibility.Visible;
-            btnAddLemon.Visibility = Visibility.Collapsed;
-            btnAddIce.Visibility = Visibility.Collapsed;
-            btnAddDecaf.Visibility = Visibility.Collapsed;
-            btnAddSweet.Visibility = Visibility.Collapsed;
+            SodasaurusButtons();
             SelectDrink(new Sodasaurus());
         }
 
         private void SelectTyrannotea(object sender, RoutedEventArgs args)
         {
-            btnSelectFlavor.Visibility = Visibility.Collapsed;
-            btnHoldIce.Visibility = Visibility.Collapsed;
-            btnAddLemon.Visibility = Visibility.Visible;
-            btnAddIce.Visibility = Visibility.Collapsed;
-            btnAddDecaf.Visibility = Visibility.Collapsed;
-            btnAddSweet.Visibility = Visibility.Visible;
+            TyrannoteaButtons();
             SelectDrink(new Tyrannotea());
         }
 
         private void SelectJurassicJava(object sender, RoutedEventArgs args)
         {
-            btnSelectFlavor.Visibility = Visibility.Collapsed;
-            btnHoldIce.Visibility = Visibility.Collapsed;
-            btnAddLemon.Visibility = Visibility.Collapsed;
-            btnAddIce.Visibility = Visibility.Visible;
-            btnAddDecaf.Visibility = Visibility.Visible;
-            btnAddSweet.Visibility = Visibility.Collapsed;
+            JurassicJavaButtons();
             SelectDrink(new JurassicJava());
         }
 
         private void SelectWater(object sender, RoutedEventArgs args)
         {
-            btnSelectFlavor.Visibility = Visibility.Collapsed;
-            btnHoldIce.Visibility = Visibility.Visible;
-            btnAddLemon.Visibility = Visibility.Visible;
-            btnAddIce.Visibility = Visibility.Collapsed;
-            btnAddDecaf.Visibility = Visibility.Collapsed;
-            btnAddSweet.Visibility = Visibility.Collapsed;
+            WaterButtons();
             SelectDrink(new Water());
         }
 
@@ -130,8 +168,55 @@ namespace PointOfSale
 
 
         protected void OnDone(object sender, RoutedEventArgs args)
+        {            
+            if (NavigationService.CanGoBack)
+            {
+                NavigationService.GoBack();
+            }
+            else
+            {
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+        }
+
+        private void SodasaurusButtons()
         {
-            NavigationService.Navigate(new MenuCategorySelection());
+            btnSelectFlavor.Visibility = Visibility.Visible;
+            btnHoldIce.Visibility = Visibility.Visible;
+            btnAddLemon.Visibility = Visibility.Collapsed;
+            btnAddIce.Visibility = Visibility.Collapsed;
+            btnAddDecaf.Visibility = Visibility.Collapsed;
+            btnAddSweet.Visibility = Visibility.Collapsed;
+        }
+
+        private void TyrannoteaButtons()
+        {
+            btnSelectFlavor.Visibility = Visibility.Collapsed;
+            btnHoldIce.Visibility = Visibility.Collapsed;
+            btnAddLemon.Visibility = Visibility.Visible;
+            btnAddIce.Visibility = Visibility.Collapsed;
+            btnAddDecaf.Visibility = Visibility.Collapsed;
+            btnAddSweet.Visibility = Visibility.Visible;
+        }
+
+        private void JurassicJavaButtons()
+        {
+            btnSelectFlavor.Visibility = Visibility.Collapsed;
+            btnHoldIce.Visibility = Visibility.Collapsed;
+            btnAddLemon.Visibility = Visibility.Collapsed;
+            btnAddIce.Visibility = Visibility.Visible;
+            btnAddDecaf.Visibility = Visibility.Visible;
+            btnAddSweet.Visibility = Visibility.Collapsed;
+        }
+
+        private void WaterButtons()
+        {
+            btnSelectFlavor.Visibility = Visibility.Collapsed;
+            btnHoldIce.Visibility = Visibility.Visible;
+            btnAddLemon.Visibility = Visibility.Visible;
+            btnAddIce.Visibility = Visibility.Collapsed;
+            btnAddDecaf.Visibility = Visibility.Collapsed;
+            btnAddSweet.Visibility = Visibility.Collapsed;
         }
     }
 }

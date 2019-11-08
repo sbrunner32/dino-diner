@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Customize SteakosaurusBurger Page
+ * Author: Sam Brunner
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DinoDiner.Menu.Entrees;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -22,10 +27,19 @@ namespace PointOfSale
     public partial class CustomizeSteakosaurusBurger : Page
     {
         private SteakosaurusBurger sb;
+        private CretaceousCombo combo = new CretaceousCombo(new SteakosaurusBurger());
         public CustomizeSteakosaurusBurger(SteakosaurusBurger sb)
         {
             InitializeComponent();
             this.sb = sb;
+        }
+
+        public CustomizeSteakosaurusBurger(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.sb = (SteakosaurusBurger)combo.Entree;
+            this.combo = combo;
+
         }
 
         private void OnHoldBun(object sender, RoutedEventArgs args)
@@ -46,13 +60,16 @@ namespace PointOfSale
         }
 
 
-
-
-
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            if (NavigationService.CanGoBack)
+            if (combo != null)
+            {
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
+            else if (NavigationService.CanGoBack)
+            {
                 NavigationService.GoBack();
+            }
             else
             {
                 NavigationService.Navigate(new MenuCategorySelection());

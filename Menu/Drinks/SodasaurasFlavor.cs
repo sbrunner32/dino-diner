@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Sodasaurus Flavor Enum
+ * Author: Sam Brunner
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

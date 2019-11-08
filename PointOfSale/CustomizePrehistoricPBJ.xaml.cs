@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Customize PrehistoricPBJ Page
+ * Author: Sam Brunner
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DinoDiner.Menu.Entrees;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -22,11 +27,19 @@ namespace PointOfSale
     public partial class CustomizePrehistoricPBJ : Page
     {
         private PrehistoricPBJ pbj;
+        private CretaceousCombo combo = new CretaceousCombo(new PrehistoricPBJ());
 
         public CustomizePrehistoricPBJ(PrehistoricPBJ pbj)
         {
             InitializeComponent();
             this.pbj = pbj;
+        }
+
+        public CustomizePrehistoricPBJ(CretaceousCombo cc)
+        {
+            InitializeComponent();
+            this.pbj = (PrehistoricPBJ)combo.Entree;
+            this.combo = cc;            
         }
 
         private void OnHoldPeanutButter(object sender, RoutedEventArgs args)
@@ -41,8 +54,14 @@ namespace PointOfSale
 
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            if(NavigationService.CanGoBack)
+            if (combo != null)
+            {
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
+            else if (NavigationService.CanGoBack)
+            {
                 NavigationService.GoBack();
+            }
             else
             {
                 NavigationService.Navigate(new MenuCategorySelection());

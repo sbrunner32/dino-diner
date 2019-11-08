@@ -1,4 +1,9 @@
-﻿using System.Collections.Generic;
+﻿/* PrehistoricPBJ Class
+ * Author: Sam Brunner
+*/
+
+
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace DinoDiner.Menu.Entrees

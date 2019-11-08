@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* OrderControl UserControl
+ * Author: Sam Brunner
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,19 +39,21 @@ namespace PointOfSale
         {
             if(OrderItems.SelectedItem is Side side)
             {
-
                 NavigationService?.Navigate(new SideSelection(side));
             }
             if (OrderItems.SelectedItem is Entree entree)
             {
-
                 NavigationService?.Navigate(new EntreeSelection());
             }
             if (OrderItems.SelectedItem is Drink drink)
             {
-
                 NavigationService?.Navigate(new DrinkSelection(drink));
             }
+            if (OrderItems.SelectedItem is CretaceousCombo combo)
+            {
+                NavigationService?.Navigate(new ComboSelection(combo));
+            }
+
         }
 
 

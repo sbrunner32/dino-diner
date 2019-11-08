@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Customize DinoNuggets Page
+ * Author: Sam Brunner
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DinoDiner.Menu.Entrees;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -22,11 +27,19 @@ namespace PointOfSale
     public partial class CustomizeDinoNuggets : Page
     {
         private DinoNuggets dn;
+        private CretaceousCombo combo = new CretaceousCombo(new DinoNuggets());
 
         public CustomizeDinoNuggets(DinoNuggets dn)
         {
             InitializeComponent();
             this.dn = dn;
+        }
+
+        public CustomizeDinoNuggets(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.dn = (DinoNuggets)combo.Entree;
+            this.combo = combo;
         }
 
         private void OnAddNugget(object sender, RoutedEventArgs args)
@@ -41,8 +54,14 @@ namespace PointOfSale
 
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            if (NavigationService.CanGoBack)
+            if (combo != null)
+            {
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
+            else if (NavigationService.CanGoBack)
+            {
                 NavigationService.GoBack();
+            }
             else
             {
                 NavigationService.Navigate(new MenuCategorySelection());

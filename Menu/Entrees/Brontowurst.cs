@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Brontowurst Class
+ * Author: Sam Brunner
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 

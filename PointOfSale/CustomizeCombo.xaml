@@ -42,21 +42,21 @@
             </StackPanel>
             <StackPanel>
                 <Label Foreground="Black" HorizontalAlignment="Center">Size</Label>
-                <RadioButton HorizontalAlignment="Center">
+                <RadioButton HorizontalAlignment="Center" Click="OnMakeSmall">
                     <DockPanel Height="90">
                         <TextBlock FontSize="20"  DockPanel.Dock="Bottom">
                         Small
                         </TextBlock>
                     </DockPanel>
                 </RadioButton>
-                <RadioButton HorizontalAlignment="Center">
+                <RadioButton HorizontalAlignment="Center" Click="OnMakeMedium">
                     <DockPanel Height="90">
                         <TextBlock FontSize="24" DockPanel.Dock="Bottom">
                         Medium
                         </TextBlock>
                     </DockPanel>
                 </RadioButton>
-                <RadioButton HorizontalAlignment="Center">
+                <RadioButton HorizontalAlignment="Center" Click="OnMakeLarge">
                     <DockPanel Height="90">
                         <TextBlock FontSize="28" DockPanel.Dock="Bottom">
                         Large
@@ -64,6 +64,9 @@
                     </DockPanel>
                 </RadioButton>
             </StackPanel>
+            <Button Height="50" Margin="50" Click="OnDone">
+                Done
+            </Button>
         </StackPanel>
     
     

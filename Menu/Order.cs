@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Order Class
+ * Author: Sam Brunner
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Collections.ObjectModel;

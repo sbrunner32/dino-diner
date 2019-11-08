@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* MeteorMacAndCheese Class
+ * Author: Sam Brunner
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;

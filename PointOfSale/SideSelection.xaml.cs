@@ -1,4 +1,8 @@
-﻿using DinoDiner.Menu;
+﻿/* Side Selection Page
+ * Author: Sam Brunner
+*/
+
+using DinoDiner.Menu;
 using DinoDiner.Menu.Sides;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,6 +15,7 @@ namespace PointOfSale
     public partial class SideSelection : Page
     {
         private Side side;
+        private CretaceousCombo combo;
 
         public Side Side {
             get
@@ -34,19 +39,41 @@ namespace PointOfSale
             Side = side;
         }
 
-        private void SelectSide(Side sideSelect)
+        public SideSelection(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.combo = combo;
+            this.side = combo.Side;
+        }
+
+        private void SelectSide(Side side)
         {
             if (DataContext is Order order)
             {
-                order.Add(sideSelect);
-                Side = sideSelect;
+                if (combo != null)
+                {
+                    this.combo.Side = side;
+                    this.Side = side;
+                }
+                else
+                {
+                    order.Add(side);
+                    this.Side = side;
+                }
             }
         }
 
         private void SelectSize(DinoDiner.Menu.Size size)
         {
             if(Side != null)
+            {
+                if (combo != null)
+                {
+                    this.combo.Side.Size = size;
+                }
                 Side.Size = size;
+            }
+                
         }
         
         public void AddFryceritops(object sender, RoutedEventArgs args)
@@ -105,6 +132,18 @@ namespace PointOfSale
         protected void OnMakeSmall(object sender, RoutedEventArgs args)
         {
             SelectSize(DinoDiner.Menu.Size.Small);
+        }
+
+        private void OnDone(object sender, RoutedEventArgs args)
+        {
+            if (NavigationService.CanGoBack)
+            {
+                NavigationService.GoBack();
+            }
+            else
+            {
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
         }
 
 
