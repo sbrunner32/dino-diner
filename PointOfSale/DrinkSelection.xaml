@@ -95,20 +95,23 @@
                 <Button Name="btnSelectFlavor" Click="SelectFlavor" Height="70" Visibility="Collapsed">
                     Flavor
                 </Button>
-                <Button Name="btnAddLemon" Height="70" Visibility="Collapsed">
+                <Button Name="btnAddLemon" Height="70" Visibility="Collapsed" Click="OnAddLemon">
                     Add Lemon
                 </Button>
-                <Button Name="btnHoldIce" Height="70" Visibility="Collapsed">
+                <Button Name="btnHoldIce" Height="70" Visibility="Collapsed" Click="OnHoldIce">
                     Hold Ice
                 </Button>
-                <Button Name="btnAddIce" Height="70" Visibility="Collapsed">
+                <Button Name="btnAddIce" Height="70" Visibility="Collapsed" Click="OnAddIce">
                     Add Ice
                 </Button>
-                <Button Name="btnAddSweet" Height="70" Visibility="Collapsed">
+                <Button Name="btnAddSweet" Height="70" Visibility="Collapsed" Click="OnAddSweet">
                     Sweet
                 </Button>
-                <Button Name="btnAddDecaf" Height="70" Visibility="Collapsed">
+                <Button Name="btnAddDecaf" Height="70" Visibility="Collapsed" Click="OnAddDecaf">
                     Decaf
+                </Button>
+                <Button Name="btnRoomForCream" Height="70" Visibility="Collapsed" Click="OnAddRoomForCream">
+                    Add room for cream
                 </Button>
             </StackPanel>
             <Button Height="50" Name="btnDone" Click="OnDone">

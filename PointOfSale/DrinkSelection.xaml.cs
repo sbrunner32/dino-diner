@@ -58,7 +58,7 @@ namespace PointOfSale
                 else
                 {
                     Drink = drink;
-                    order.Add(drink);                    
+                    order.Add(drink);
                 }
             }
 
@@ -168,7 +168,7 @@ namespace PointOfSale
 
 
         protected void OnDone(object sender, RoutedEventArgs args)
-        {            
+        {
             if (NavigationService.CanGoBack)
             {
                 NavigationService.GoBack();
@@ -187,6 +187,7 @@ namespace PointOfSale
             btnAddIce.Visibility = Visibility.Collapsed;
             btnAddDecaf.Visibility = Visibility.Collapsed;
             btnAddSweet.Visibility = Visibility.Collapsed;
+            btnRoomForCream.Visibility = Visibility.Collapsed;
         }
 
         private void TyrannoteaButtons()
@@ -197,6 +198,7 @@ namespace PointOfSale
             btnAddIce.Visibility = Visibility.Collapsed;
             btnAddDecaf.Visibility = Visibility.Collapsed;
             btnAddSweet.Visibility = Visibility.Visible;
+            btnRoomForCream.Visibility = Visibility.Collapsed;
         }
 
         private void JurassicJavaButtons()
@@ -207,6 +209,7 @@ namespace PointOfSale
             btnAddIce.Visibility = Visibility.Visible;
             btnAddDecaf.Visibility = Visibility.Visible;
             btnAddSweet.Visibility = Visibility.Collapsed;
+            btnRoomForCream.Visibility = Visibility.Visible;
         }
 
         private void WaterButtons()
@@ -217,6 +220,16 @@ namespace PointOfSale
             btnAddIce.Visibility = Visibility.Collapsed;
             btnAddDecaf.Visibility = Visibility.Collapsed;
             btnAddSweet.Visibility = Visibility.Collapsed;
+            btnRoomForCream.Visibility = Visibility.Collapsed;
+        }
+
+
+        private void onAddLemon(object sender, RoutedEventArgs args)
+        {
+            if(Drink is Tyrannotea tea)
+            {
+                tea.AddLemon();
+            }
         }
     }
 }
