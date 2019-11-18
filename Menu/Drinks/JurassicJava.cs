@@ -78,6 +78,7 @@ namespace DinoDiner.Menu.Drinks
                 }
                 NotifyOfPropertyChange("Price");
                 NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Calories");
             }
             get
             {
