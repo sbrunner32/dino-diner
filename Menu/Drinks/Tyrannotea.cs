@@ -110,6 +110,7 @@ namespace DinoDiner.Menu.Drinks
                 }
                 NotifyOfPropertyChange("Price");
                 NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Calories");
             }
             get
             {
@@ -134,6 +135,15 @@ namespace DinoDiner.Menu.Drinks
         {
             this.Lemon = true;
             NotifyOfPropertyChange("Special");
+        }
+
+        /// <summary>
+        /// Method to change the tea from regular tea to sweet tea
+        /// </summary>
+        public void AddSweet()
+        {
+            this.Sweet = true;
+            NotifyOfPropertyChange("Calories");
         }
 
         /// <summary>

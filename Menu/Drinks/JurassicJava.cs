@@ -115,6 +115,16 @@ namespace DinoDiner.Menu.Drinks
         }
 
         /// <summary>
+        /// Helper function to set the Jurassic Java to decaf
+        /// </summary>
+        public void AddDecaf()
+        {
+            this.Decaf = true;
+            NotifyOfPropertyChange("Description");
+            NotifyOfPropertyChange("Special");
+        }
+
+        /// <summary>
         /// Override of the ToString method 
         /// </summary>
         /// <returns>The name of this drink</returns>

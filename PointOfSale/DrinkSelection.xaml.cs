@@ -60,6 +60,22 @@ namespace PointOfSale
                     Drink = drink;
                     order.Add(drink);
                 }
+                if (Drink is Sodasaurus soda)
+                {
+                    SodasaurusButtons();
+                }
+                if (Drink is JurassicJava java)
+                {
+                    JurassicJavaButtons();
+                }
+                if (Drink is Tyrannotea tea)
+                {
+                    TyrannoteaButtons();
+                }
+                if (Drink is Water water)
+                {
+                    WaterButtons();
+                }
             }
 
         }
@@ -223,13 +239,97 @@ namespace PointOfSale
             btnRoomForCream.Visibility = Visibility.Collapsed;
         }
 
-
+        /// <summary>
+        /// Click event to add lemon to the drink
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void onAddLemon(object sender, RoutedEventArgs args)
         {
             if(Drink is Tyrannotea tea)
             {
                 tea.AddLemon();
             }
+            else if (Drink is Water water)
+            {
+                water.AddLemon();
+            }
+
         }
+
+        /// <summary>
+        /// Click event to hold ice from the drink
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void onHoldIce(object sender, RoutedEventArgs args)
+        {
+            if (Drink is Sodasaurus soda)
+            {
+                soda.HoldIce();
+            }            
+            if (Drink is Water water)
+            {
+                water.HoldIce();
+            }
+            if (Drink is Tyrannotea tea)
+            {
+                tea.HoldIce();
+            }
+        }
+
+        /// <summary>
+        /// Click event to add ice to the JurassicJava
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void onAddIce(object sender, RoutedEventArgs args)
+        {
+            if (Drink is JurassicJava java)
+            {
+                java.AddIce();
+            }
+        }
+
+        /// <summary>
+        /// Click event to make the tea into sweet tea. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void onAddSweet(object sender, RoutedEventArgs args)
+        {
+            if (Drink is Tyrannotea tea)
+            {
+                tea.AddSweet();
+            }
+        }
+
+        /// <summary>
+        /// Sets the Jurassic Java to decaf
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void onAddDecaf(object sender, RoutedEventArgs args)
+        {
+            if (Drink is JurassicJava java)
+            {
+                java.AddDecaf();          
+            }
+        }
+
+        /// <summary>
+        /// Leaves room for cream for the Jurassic Java
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void onAddRoomForCream(object sender, RoutedEventArgs args)
+        {
+            if (Drink is JurassicJava java)
+            {
+                java.LeaveRoomForCream();
+            }
+        }
+
+
     }
 }
