@@ -81,6 +81,7 @@ namespace DinoDiner.Menu.Drinks
             {
                 size = value;
                 NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Price");
             }
         }
 
