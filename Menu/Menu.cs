@@ -16,6 +16,20 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Menu
     {
+
+        public HashSet<string> PossibleIngredients {
+            get
+            {
+                HashSet<string> results = new HashSet<string>();
+                foreach(IMenuItem i in AvailableMenuItems)
+                {
+
+                }
+                return results;
+            }
+            
+        } 
+
         /// <summary>
         /// Public getter to return all the currently available Entree items on the menu.
         /// </summary>
