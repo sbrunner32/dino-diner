@@ -13,7 +13,7 @@ namespace DinoDiner.Menu.Sides
     /// <summary>
     /// Class representing a side item from the menu
     /// </summary>
-    public abstract class Side : INotifyPropertyChanged, IOrderItem
+    public abstract class Side : INotifyPropertyChanged, IOrderItem, IMenuItem
     {
         /// <summary>
         /// The PropertyChanged Event handler; notifies

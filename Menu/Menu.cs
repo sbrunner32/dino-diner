@@ -8,6 +8,7 @@ using System.Text;
 using DinoDiner.Menu.Entrees;
 using DinoDiner.Menu.Sides;
 using DinoDiner.Menu.Drinks;
+using System.Linq;
 
 namespace DinoDiner.Menu
 {
@@ -17,17 +18,20 @@ namespace DinoDiner.Menu
     public class Menu
     {
 
-        public HashSet<string> PossibleIngredients {
+        public List<string> PossibleIngredients {
             get
             {
                 HashSet<string> results = new HashSet<string>();
-                foreach(IMenuItem i in AvailableMenuItems)
+                Menu tempMenu = new Menu();
+                foreach(IMenuItem i in tempMenu.AvailableMenuItems)
                 {
-
+                    foreach(string ingredient in i.Ingredients)
+                    {
+                        results.Add(ingredient);
+                    }
                 }
-                return results;
-            }
-            
+                return results.ToList();
+            }            
         } 
 
         /// <summary>

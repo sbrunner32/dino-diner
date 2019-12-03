@@ -16,7 +16,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Class representing an entree item from the menu with calories and price
     /// </summary>
-    public abstract class Entree : INotifyPropertyChanged, IOrderItem
+    public abstract class Entree : INotifyPropertyChanged, IOrderItem, IMenuItem
     {
         /// <summary>
         /// The PropertyChanged Event handler; notifies

@@ -12,7 +12,7 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// Abstract class to denote a drink item from the menu.
     /// </summary>
-    public abstract class Drink : INotifyPropertyChanged, IOrderItem
+    public abstract class Drink : INotifyPropertyChanged, IOrderItem, IMenuItem
     {
         /// <summary>
         /// The PropertyChanged Event handler; notifies
