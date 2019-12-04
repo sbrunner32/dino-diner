@@ -44,8 +44,8 @@
                     @foreach(string ingredient in Model.Menu.PossibleIngredients)
                     {
                         <label>
-                            <input type="checkbox" value="@ingredient" name="@ingredient" />
-                            @ingredient
+                            <input type="checkbox" value="@(ingredient)" name="selectedIngredients" checked ="@(Model.selectedIngredients.Contains(ingredient))"/>
+                            @(ingredient)
                         </label>
                     }
                 </div>
@@ -59,14 +59,7 @@
             {
                 @(Model.search = "");
             }
-            @if(Model.selectedIngredients.Count> 0)
-            {
-                IEnumerable<DinoDiner.Menu.IMenuItem> temp;
-                foreach(DinoDiner.Menu.IMenuItem item in Model.Items)
-                {
-
-                }
-            }
+            
             <h1><u>Menu Categories</u></h1>
             <h2>Cretaceous Combos</h2>
             <div id="combos" name="combos">
@@ -74,10 +67,11 @@
                 {
                     @foreach (DinoDiner.Menu.CretaceousCombo combo in Model.AvailableCombos)
                     {
-                        @if ( combo.Description.Contains(Model.search, StringComparison.OrdinalIgnoreCase))
+                        @if (combo.Description.Contains(Model.search, StringComparison.OrdinalIgnoreCase))
                         {
-                            @if (combo.Price >= Model.minPrice && combo.Price <= Model.maxPrice)
+                            @if ((combo.Price >= Model.minPrice && combo.Price <= Model.maxPrice) && !Model.ContainsSelectedIngredientsOrNone(combo))
                             {
+                                
                                 <div class="menu-items" name="ComboItems">
                                     <h3>@combo.Description:</h3>
                                     <p>
@@ -114,7 +108,7 @@
                     {
                         @if (entree.Description.Contains(Model.search, StringComparison.OrdinalIgnoreCase))
                         {
-                            @if (entree.Price >= Model.minPrice && entree.Price <= Model.maxPrice)
+                            @if (entree.Price >= Model.minPrice && entree.Price <= Model.maxPrice && !Model.ContainsSelectedIngredientsOrNone(entree))
                             {
                                 <div class="menu-items" name="EntreeItems">
                                     <h3>@entree.Description:</h3>
@@ -153,7 +147,7 @@
                     {
                         @if (side.Description.Contains(Model.search, StringComparison.OrdinalIgnoreCase))
                         {
-                            @if (side.Price >= Model.minPrice && side.Price <= Model.maxPrice)
+                            @if (side.Price >= Model.minPrice && side.Price <= Model.maxPrice && !Model.ContainsSelectedIngredientsOrNone(side))
                             {
                                 <div class="menu-items" name="SideItems">
                                     <h3>@side.Description:</h3>
@@ -192,7 +186,7 @@
 
                         @if (drink.Description.Contains(Model.search, StringComparison.OrdinalIgnoreCase))
                         {
-                            @if (drink.Price >= Model.minPrice && drink.Price <= Model.maxPrice)
+                            @if (drink.Price >= Model.minPrice && drink.Price <= Model.maxPrice && !Model.ContainsSelectedIngredientsOrNone(drink))
                             {
                                 <div class="menu-items" name="DrinkItems">
                                     <h3>@drink.Description:</h3>

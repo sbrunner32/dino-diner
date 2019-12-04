@@ -148,6 +148,44 @@ namespace Website.Pages
             }
         }
 
+        public bool ContainsSelectedIngredientsOrNone(IMenuItem item)
+        {
+            if (selectedIngredients.Count == 0)
+                return false;
+            else
+            {
+                foreach(string ingredient in item.Ingredients)
+                {
+                    if (selectedIngredients.Contains(ingredient) )
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public bool ContainsSearchTerm(IMenuItem item)
+        {
+            if (search.Length == 0)
+                return true;
+            if(item.Description.Contains(search, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+            //Code to possibly allow the user to search for an ingredient to find items with that ingredient.
+            /*foreach(string ingredient in item.Ingredients)
+            {
+                if (ingredient.Contains(search, StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }*/
+
+            return false;
+        }
+
         
     }
 }
